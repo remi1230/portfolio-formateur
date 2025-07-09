@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
+
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-  output: 'standalone',
-  basePath: '',
-  assetPrefix: '/',
-  appDir: true,
+  reactStrictMode: true,
+  output: isProd ? 'standalone' : undefined,
+  basePath: isProd ? '' : undefined,
+  assetPrefix: isProd ? '/' : undefined,
 };
 
 module.exports = nextConfig;

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function HeroCTA() {
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-4 justify-center">
       <Link
         href="#contact"
         className="px-6 py-2 rounded-md bg-brand-fg text-brand-bg font-semibold hover:bg-brand-hover transition-colors duration-300"
