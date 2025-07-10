@@ -1,9 +1,9 @@
 // src/components/Compagny/data.js
 
 // Importez vos logos/images. Assurez-vous que les chemins sont corrects.
-import logoCpam from '../../assets/images/cpam-logo.png';
-import logoEnedis from '../../assets/images/enedis-logo.png';
-import logoUIMM from '../../assets/images/uimm-logo.png';
+const logoCpam   = '/assets/images/cpam-logo.png';
+const logoEnedis = '/assets/images/enedis-logo.png';
+const logoUIMM   = '/assets/images/uimm-logo.png';
 
 export const experiencesData = [
   {

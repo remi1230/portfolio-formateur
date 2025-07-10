@@ -1,6 +1,6 @@
 import HeroSection from '../components/hero/HeroSection';
 import BioSection from '../components/bio/BioSection';
-import CompanySection from '../components/Company/CompanySection';
+import CompanySection from '../components/company/CompanySection';
 
 export default function Home() {
   return (
