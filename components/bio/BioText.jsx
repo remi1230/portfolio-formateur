@@ -2,7 +2,7 @@ export default function BioText() {
   return (
     <div className="w-full md:w-7/12 text-center md:text-left space-y-6">
       <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
-        Développeur web full stack passionné
+        Développeur web full stack <span className="text-brand-important">passionné</span>
       </h1>
 
       <div className="flex flex-col gap-10 text-xl text-gray-300 leading-relaxed">

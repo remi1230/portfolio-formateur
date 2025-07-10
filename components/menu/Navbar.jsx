@@ -51,7 +51,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur bg-[#0f172a]/70">
-      <nav className="navbar max-w-[1600px] mx-auto py-3 px-4">
+      <nav className="navbar max-w-screen-xl mx-auto py-1 px-4">
 
         {/* Section gauche : Menu burger (mobile) + Logo/Nom */}
         <div className="navbar-start">
@@ -105,10 +105,10 @@ export default function Navbar() {
         {/* Section droite : Réseaux sociaux */}
         <div className="navbar-end gap-2">
           <SocialIcon href="https://github.com">
-            <FaGithub size={19} />
+            <FaGithub size={18} />
           </SocialIcon>
           <SocialIcon href="https://linkedin.com">
-            <FaLinkedin size={19} />
+            <FaLinkedin size={18} />
           </SocialIcon>
           <SocialIcon href="/CV.pdf" download>
             <span className="font-semibold text-sm">CV</span>

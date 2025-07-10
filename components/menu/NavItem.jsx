@@ -11,7 +11,7 @@ export default function NavItem({ href, label, onClick }) {
       <Link
         href={href}
         onClick={onClick}
-        className="btn btn-ghost btn-sm px-4 py-6 rounded-xl text-lg font-medium hover:bg-white/10" // Adjusted for DaisyUI button style
+        className="btn btn-ghost btn-sm px-4 py-6 rounded-xl text-sm font-medium hover:bg-white/10" // Adjusted for DaisyUI button style
       >
         {label}
       </Link>
