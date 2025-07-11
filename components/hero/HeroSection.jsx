@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section
       className="
-        w-full min-h-[70vh] flex flex-col items-center justify-center text-center px-4
+        w-full min-h-[30vh] lg:min-h-[70vh] flex flex-col items-center justify-center text-center px-4
         relative /* Important pour que l'SVG 'absolute' se positionne par rapport à cette section */
         overflow-hidden /* Pour cacher les parties du SVG qui pourraient dépasser si le motif est grand */
       "

@@ -16,7 +16,7 @@ function CompanyListItem({ experience, isSelected, onSelect }) {
   return (
     <div className={itemClassName} onClick={onSelect}>
       {/* 2. Remplacer la structure de l'image */}
-      <div className="avatar">
+      <div className="">
         <Image
           src={experience.logo}
           alt={`${experience.company} logo`}

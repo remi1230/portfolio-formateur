@@ -1,6 +1,7 @@
 // src/components/Company/CompanyDetails.jsx
 
-import Image from 'next/image'; // 1. Importer le composant
+import Image from 'next/image';
+import { motion } from 'framer-motion'; // <<< ADDED THIS LINE
 
 function CompanyDetails({ experience }) {
   if (!experience) {
@@ -12,28 +13,32 @@ function CompanyDetails({ experience }) {
   }
 
   return (
-    <div className="flex flex-col items-center text-center">
-      <div className="avatar mb-6">
-        <div className="w-24 rounded-xl bg-white p-2 shadow-lg">
-          <Image
-            src={experience.logo}
-            alt={`${experience.company} logo`}
-            width={80}  // 3. Spécifier la largeur
-            height={80} // 4. Spécifier la hauteur
-          />
-        </div>
+    <motion.div
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0,}}
+      transition={{ duration: 0.3 }}
+      className="flex flex-col items-center text-center"
+    >
+      <div className="h-20 avatar mb-6 p-3 hidden lg:flex">
+        <Image
+          src={experience.logo}
+          alt={`${experience.company} logo`}
+          width={64}
+          height={64}
+          className="rounded-lg object-contain"
+        />
       </div>
 
       <h3 className="text-3xl font-extrabold text-base-content">{experience.company}</h3>
 
-      {/* La classe "badge" de DaisyUI est parfaite pour le rôle */}
       <div className="badge badge-accent badge-lg my-4">{experience.role}</div>
 
       <div
-        className="text-base-content/80 leading-relaxed text-left w-full prose"
+        className="leading-relaxed text-left w-full pt-5"
         dangerouslySetInnerHTML={{ __html: experience.description }}
       />
-    </div>
+    </motion.div>
   );
 }
 
