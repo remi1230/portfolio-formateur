@@ -24,7 +24,7 @@ export const experiencesData = [
     et la mise en place de nouvelles fonctionnalités sur mesure.
     </p>
     <p>
-    Cette approche innovante a permis de ${boldStyle} améliorer la performance et la stabilité des applications</span>,
+    Cette approche innovante a permis d' ${boldStyle} améliorer la performance et la stabilité des applications</span>,
     Grâce à une collaboration constante avec les équipes,
     j'ai garanti que les solutions apportent une réelle valeur ajoutée, optimisant les processus internes et la qualité de service aux usagers.
     </p>
