@@ -25,8 +25,8 @@ export const experiencesData = [
     </p>
     <p>
     Cette approche innovante a permis d' ${boldStyle} améliorer la performance et la stabilité des applications</span>,
-    Grâce à une collaboration constante avec les équipes,
-    j'ai garanti que les solutions apportent une réelle valeur ajoutée, optimisant les processus internes et la qualité de service aux usagers.
+    grâce à une collaboration constante avec les équipes,
+    j’ai veillé à ce que les solutions apportées offrent une réelle valeur ajoutée, en optimisant les processus internes et la qualité de service rendue aux usagers.
     </p>
     </div>`
   },
@@ -34,7 +34,7 @@ export const experiencesData = [
     id: 2,
     company: "L'UIMM de Rennes",
     role: 'Développeur full stack',
-    dates: 'Janv. 2024 - Janv. 2025',
+    dates: 'Janv. 2021 - Août 2021',
     logo: logoUIMM,
     description: `<div style="display: flex; flex-direction: column; gap: 1vh;">
     <p>
@@ -54,7 +54,7 @@ export const experiencesData = [
     id: 3,
     company: 'Enedis de Tours',
     role: 'Analyste et développeur full stack',
-    dates: 'Sept. 2023 - Août 2024',
+    dates: 'Sept. 2019 - Spet. 2020',
     logo: logoEnedis,
     description: `<div style="display: flex; flex-direction: column; gap: 1vh;">
     <p>
@@ -74,7 +74,7 @@ export const experiencesData = [
     id: 4,
     company: 'Enedis de La Rochelle',
     role: 'Développeur full stack',
-    dates: 'Janv. 2024 - Janv. 2025',
+    dates: 'Mars. 2018 - Sept. 2018',
     logo: logoEnedis,
     description: `<div style="display: flex; flex-direction: column; gap: 1vh;">
     <p>
@@ -98,7 +98,7 @@ export const experiencesData = [
     id: 5,
     company: 'Enedis de Saintes',
     role: "Développeur d'applications",
-    dates: 'Sept. 2023 - Août 2024',
+    dates: 'Sept. 2016 - Mars 2018',
     logo: logoEnedis,
     description: `<div style="display: flex; flex-direction: column; gap: 1vh;">
     <p>

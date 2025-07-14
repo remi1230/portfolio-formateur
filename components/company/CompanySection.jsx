@@ -12,7 +12,7 @@ function CompanySection() {
   const selectedCompany = experiencesData.find(exp => exp.id === selectedCompanyId);
 
   return (
-    <section className="min-h-[34vw] pt-10 pr-6 rounded-2xl bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900">
+    <section  id="projects" className="scroll-mt-20 min-h-[34vw] pt-10 pr-6 rounded-2xl bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900">
       <div className="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto">
         
         {/* --- COLONNE DE GAUCHE : DÉTAILS DE L'ENTREPRISE --- */}

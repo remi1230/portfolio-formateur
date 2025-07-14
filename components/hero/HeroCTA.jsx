@@ -5,13 +5,13 @@ export default function HeroCTA() {
     <div className="flex space-x-4 justify-center">
       <Link
         href="#contact"
-        className="px-6 py-2 rounded-md bg-brand-fg text-brand-bg font-semibold hover:bg-brand-hover transition-colors duration-300"
+        className="px-6 py-2 rounded-md bg-brand-fg text-brand-bg font-semibold hover:bg-brand-important hover:text-brand-fg transition-colors duration-300"
       >
         Me contacter
       </Link>
       <Link
         href="#projects"
-        className="px-6 py-2 rounded-md border border-brand-fg text-brand-fg hover:bg-brand-fg hover:text-brand-bg transition-colors duration-300"
+        className="px-6 py-2 btn btn-outline hover:bg-amber-500 hover:text-brand-bg transition-colors duration-300"
       >
         Voir mes projets
       </Link>

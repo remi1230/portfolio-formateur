@@ -5,7 +5,7 @@ import StackTitle from './StackTitle';
 
 function StackSection() {
   return (
-    <section className="">
+    <section id="skills" className="scroll-mt-28">
       <div className="">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           

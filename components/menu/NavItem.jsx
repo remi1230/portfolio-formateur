@@ -1,20 +1,38 @@
-// menu/NavItem.jsx
-import Link from "next/link";
+'use client';
 
 export default function NavItem({ href, label, onClick }) {
+  const handleClick = (e) => {
+    e.preventDefault();
+    onClick?.();
+
+    const targetId = href.replace(/^#/, '');
+    const el = document.getElementById(targetId);
+    if (!el) return;
+
+    const header = document.querySelector('header');
+    const headerHeight = header?.offsetHeight || 0;
+
+    const style = window.getComputedStyle(el);
+    const scrollMT = parseFloat(style.scrollMarginTop) || 0;
+
+    const y =
+      el.getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight -
+      scrollMT;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
+
   return (
     <li>
-      {/* 'btn btn-ghost' pour un style de bouton léger, 'btn-sm' pour une petite taille, 'rounded-btn' pour des coins arrondis */}
-      {/* Les classes 'hover:bg-white/10' peuvent être redondantes ou remplacées par le style de DaisyUI,
-          mais je les laisse pour l'instant si vous voulez conserver un effet personnalisé.
-          DaisyUI a ses propres hover states par défaut pour les items de menu. */}
-      <Link
+      <a
         href={href}
-        onClick={onClick}
-        className="btn btn-ghost btn-sm px-4 py-6 rounded-xl text-sm font-medium hover:bg-white/10" // Adjusted for DaisyUI button style
+        onClick={handleClick}
+        className="btn btn-ghost btn-sm px-4 py-6 rounded-xl text-sm font-medium hover:bg-white/10"
       >
         {label}
-      </Link>
+      </a>
     </li>
   );
 }

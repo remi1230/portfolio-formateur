@@ -5,7 +5,7 @@ import HeroCTA from './HeroCTA';
 
 export default function HeroSection() {
   return (
-    <section
+    <section id="about"
       className="
         w-full min-h-[30vh] lg:min-h-[70vh] flex flex-col items-center justify-center text-center px-4
         relative /* Important pour que l'SVG 'absolute' se positionne par rapport à cette section */

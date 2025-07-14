@@ -1,14 +1,13 @@
-// menu/Logo.jsx
-'use client'; // Garde le use client si Next.js l'exige
+'use client';
 
+import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Logo() {
   return (
-    // J'ai ajouté 'ml-2' pour un peu d'espace avec le bouton burger si présent
-    <div className="flex items-center space-x-2 ml-2">
+    <Link href="#hero" className="flex items-center space-x-2 ml-2 cursor-pointer">
       <Image
-        src='/assets/images/logoSite.png'
+        src="/assets/images/logoSite.png"
         alt="Logo Rémi Tafforeau"
         width={32}
         height={32}
@@ -16,6 +15,6 @@ export default function Logo() {
         priority
       />
       <span className="text-2xl text-brand-fg font-bold">Rémi Tafforeau</span>
-    </div>
+    </Link>
   );
 }

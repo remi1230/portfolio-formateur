@@ -6,7 +6,9 @@ function StackTitle() {
         <span className="text-brand-important"> prédilection</span>
       </h2>
       <p className="mt-6 leading-8">
-        Je suis la philosophie <strong className="text-gray-200">ship first</strong> — lancer rapidement pour itérer ensuite. Pour ce faire, j'utilise un ensemble d'outils modernes pouvant couvrir l'intégralité de n'importe quel projet. C'est comme ça que je peux transformer rapidement une idée en un produit fonctionnel et sécurisé.
+        Ma méthode : livrer rapidement une première version (ship first), puis itérer en continu.
+        Grâce à une stack moderne et complète, je prends en charge toutes les dimensions d’un projet, de l’idée au produit final,
+        pour qu’une simple idée prenne forme en un produit fiable et sécurisé.
       </p>
     </div>
   );

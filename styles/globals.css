@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --brand-bg: oklch(0.2034 0.04 265.69);
+  --brand-fg: oklch(93% 0.01 255);
+  --brand-important: oklch(79% 0.19 155);
+}
+
+[data-theme='light'] {
+  --brand-bg: oklch(59.44% 0.05722 276.193);
+  --brand-fg: oklch(100% 0 0);
+  --brand-important: oklch(68.695% 0.15922 50.05);
+}

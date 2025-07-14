@@ -16,7 +16,7 @@ export default function BioText() {
           Je partage également mon expertise en formant les futurs développeurs du numérique.
         </p>
         <p className="italic text-gray-400 text-base">
-          Ma force : un équilibre entre maîtrise technique, clarté pédagogique et sens du résultat.
+          Ma force : expertise technique, compréhension métier, réactivité et orientation résultats.
         </p>
       </div>
       <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-4">
