@@ -43,7 +43,7 @@ export default function ContactForm() {
           value={form.name}
           onChange={handleChange}
           placeholder="John Doe"
-          className="input input-bordered w-full bg-brand-bg"
+          className="input input-bordered w-full bg-brand-bg placeholder-brand-fo"
           required
         />
         <input
@@ -52,7 +52,7 @@ export default function ContactForm() {
           value={form.email}
           onChange={handleChange}
           placeholder="john.doe@gmail.com"
-          className="input input-bordered w-full bg-brand-bg"
+          className="input input-bordered w-full bg-brand-bg placeholder-brand-fo"
           required
         />
       </div>
@@ -62,7 +62,7 @@ export default function ContactForm() {
         value={form.message}
         onChange={handleChange}
         placeholder="Entrez votre message..."
-        className="w-full textarea textarea-bordered h-32 bg-brand-bg"
+        className="w-full textarea textarea-bordered h-32 bg-brand-bg placeholder-brand-fo"
         required
       ></textarea>
 

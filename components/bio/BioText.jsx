@@ -5,7 +5,7 @@ export default function BioText() {
         Développeur web full stack <span className="text-brand-important">passionné</span>
       </h1>
 
-      <div className="flex flex-col gap-10 text-xl text-gray-300 leading-relaxed">
+      <div className="flex flex-col gap-10 text-xl leading-relaxed">
         <p>
           Je conçois des applications sur mesure avec <strong>Symfony</strong>, <strong>React</strong> ou <strong>Next.js</strong> pour répondre aux vrais besoins métier.
         </p>
@@ -15,7 +15,7 @@ export default function BioText() {
         <p>
           Je partage également mon expertise en formant les futurs développeurs du numérique.
         </p>
-        <p className="italic text-gray-400 text-base">
+        <p className="italic text-brand-fo text-base">
           Ma force : expertise technique, compréhension métier, réactivité et orientation résultats.
         </p>
       </div>

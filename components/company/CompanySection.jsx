@@ -12,7 +12,7 @@ function CompanySection() {
   const selectedCompany = experiencesData.find(exp => exp.id === selectedCompanyId);
 
   return (
-    <section  id="projects" className="scroll-mt-20 min-h-[34vw] pt-10 pr-6 rounded-2xl bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900">
+    <section  id="projects" className="scroll-mt-20 min-h-[34vw] pt-10 pr-6 rounded-2xl bg-gdt-company-brand">
       <div className="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto">
         
         {/* --- COLONNE DE GAUCHE : DÉTAILS DE L'ENTREPRISE --- */}
@@ -33,10 +33,10 @@ function CompanySection() {
 
         {/* --- COLONNE DE DROITE : LISTE DES ENTREPRISES --- */}
         <div className="lg:w-1/2 pl-6 lg:pl-0 order-1 lg:order-none">
-          <h2 className="text-4xl md:text-5xl font-bold text-base-content mb-2">
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
             C'était un réel plaisir de <span className="text-brand-important">travailler ensemble</span>
           </h2>
-          <p className="text-base-content/70 mb-8">
+          <p className="mb-8">
             Merci à toutes les entreprises qui m'ont fait confiance ↓
           </p>
           <CompanyList

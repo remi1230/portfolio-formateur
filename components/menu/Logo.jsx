@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Logo() {
   return (
-    <Link href="#hero" className="flex items-center space-x-2 ml-2 cursor-pointer">
+    <Link href="#hero" className="btn btn-ghost rounded-xl hover:bg-white/10 flex items-center space-x-1 cursor-pointer">
       <Image
         src="/assets/images/logoSite.png"
         alt="Logo Rémi Tafforeau"

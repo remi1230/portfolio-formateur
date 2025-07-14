@@ -9,7 +9,7 @@ export default function ContactSection() {
       </h2>
       <p className="mb-8">
         Vous pouvez également me contacter par un mail :
-        <a href="mailto:remitafforeau@gmail.com" className="link">
+        <a href="mailto:remitafforeau@gmail.com" className="link px-1">
           remitafforeau@gmail.com
         </a>
       </p>

@@ -3,9 +3,9 @@ import Image from 'next/image';
 export default function ContactTestimony() {
   return (
     <div className="space-y-4">
-      <h3 className="text-sm font-bold tracking-wide uppercase text-gray-300">ENEDIS</h3>
-      <blockquote className="text-gray-100 italic">
-        <span className="text-4xl leading-none text-gray-400">“</span>
+      <h3 className="text-sm font-bold tracking-wide uppercase">ENEDIS</h3>
+      <blockquote className="italic">
+        <span className="text-4xl leading-none">“</span>
         Merci à Rémi pour son implication et son travail de qualité dans le développement de notre portail web. Son intervention a permis 
         l’installation fluide de notre nouveau service.
       </blockquote>
@@ -20,7 +20,7 @@ export default function ContactTestimony() {
         />
         <div>
           <p className="font-semibold">Bruno G.</p>
-          <p className="text-sm text-gray-400">Chef de projet - ENEDIS</p>
+          <p className="text-sm text-brand-fo">Chef de projet - ENEDIS</p>
         </div>
       </div>
     </div>

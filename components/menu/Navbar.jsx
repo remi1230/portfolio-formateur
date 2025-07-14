@@ -7,6 +7,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import NavItem from './NavItem';
 import SocialIcon from './SocialIcon';
 import Logo from './Logo';
+import ThemeSwitch from '../ui-kit/ThemeSwitch';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,8 +45,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur bg-[#0f172a]/70">
-      <nav className="navbar max-w-screen-xl mx-auto py-1">
+    <header className="sticky top-0 z-50 backdrop-blur bg-[oklch(var(--navbar-brand-bg)/0.7)]">
+      <nav className="navbar max-w-screen-xl mx-auto py-0.5">
         <div className="navbar-start">
           <div className="dropdown" ref={dropdownRef}>
             <input
@@ -96,6 +97,7 @@ export default function Navbar() {
           <SocialIcon href="/assets/documents/CV.pdf" download>
             <span className="font-semibold text-sm">CV</span>
           </SocialIcon>
+          <ThemeSwitch className="p-4"/>
         </div>
       </nav>
     </header>

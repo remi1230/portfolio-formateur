@@ -5,7 +5,7 @@ const logoCpam   = '/assets/images/cpam-logo.png';
 const logoEnedis = '/assets/images/enedis-logo.png';
 const logoUIMM   = '/assets/images/uimm-logo.png';
 
-const boldStyle = "<span style = 'font-weight: 900; color: oklch(100% 0.05 255);' >";
+const boldStyle = "<span style = 'font-weight: 900; color: var(--cpn-bold);' >";
 
 export const experiencesData = [
   {
@@ -102,8 +102,7 @@ export const experiencesData = [
     logo: logoEnedis,
     description: `<div style="display: flex; flex-direction: column; gap: 1vh;">
     <p>
-    Chez ENEDIS à Saintes, 
-    j'ai joué un rôle clé dans l'intégration de nouveaux services grâce au ${boldStyle}développement d'un portail web dédié et d'outils bureautiques avancés</span>.
+    J'ai joué un rôle clé dans l'intégration de nouveaux services grâce au ${boldStyle}développement d'un portail web dédié et d'outils bureautiques avancés</span>.
     </p>
     <p>
     J'ai conçu des bases de données sur mesure et développé des sites en méthode Agile, tout en assurant ${boldStyle}la formation des équipes</span>.

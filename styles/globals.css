@@ -4,12 +4,26 @@
 
 :root {
   --brand-bg: oklch(0.2034 0.04 265.69);
+  --navbar-brand-bg: 0.1634 0.04 265.69;;
   --brand-fg: oklch(93% 0.01 255);
   --brand-important: oklch(79% 0.19 155);
+  --brand-footer: #1e293b;
+  --brand-fo: #9ca3af;
+  --cpn-bold: oklch(100% 0.05 255);
+  --gd-cpn-from: #334155;
+  --gd-cpn-via: #1e293b;
+  --gd-cpn-to:  #0f172a;
 }
 
 [data-theme='light'] {
-  --brand-bg: oklch(59.44% 0.05722 276.193);
-  --brand-fg: oklch(100% 0 0);
-  --brand-important: oklch(68.695% 0.15922 50.05);
+  --brand-bg: oklch(0.76 0.05 276.8);
+  --navbar-brand-bg: 59.44% 0.05722 276.193;
+  --brand-fg: oklch(33% 0.01 255);
+  --brand-important: oklch(0.62 0.20 53.77);
+  --brand-footer: #827fb3;
+  --brand-fo: #4c5e7f;
+  --cpn-bold: oklch(30.058% 0.01873 196.301);
+  --gd-cpn-from: #e0e7ff;
+  --gd-cpn-via: #c7d2fe;
+  --gd-cpn-to:  #a5b4fc;
 }
