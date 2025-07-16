@@ -65,7 +65,7 @@ export default function Navbar() {
             >
               {isMenuOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
             </label>
-            <ul tabIndex={0} className={`menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#0f172a] rounded-box w-52 ${isMenuOpen ? 'block' : 'hidden'}`}>
+            <ul tabIndex={0} className={`menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-brand-bg rounded-box w-52 ${isMenuOpen ? 'block' : 'hidden'}`}>
               {menuItems.map((item) => (
                 <NavItem
                   key={item.href}
@@ -88,15 +88,17 @@ export default function Navbar() {
         </div>
 
         <div className="navbar-end gap-2">
-          <SocialIcon href="https://github.com/remi1230">
-            <FaGithub size={18} />
-          </SocialIcon>
-          <SocialIcon href="https://www.linkedin.com/in/r%C3%A9mi-tafforeau/">
-            <FaLinkedin size={18} />
-          </SocialIcon>
-          <SocialIcon href="/assets/documents/CV.pdf" download>
-            <span className="font-semibold text-sm">CV</span>
-          </SocialIcon>
+          <div className="hidden md:flex md:gap-2">
+            <SocialIcon href="https://github.com/remi1230">
+              <FaGithub size={18} />
+            </SocialIcon>
+            <SocialIcon href="https://www.linkedin.com/in/r%C3%A9mi-tafforeau/">
+              <FaLinkedin size={18} />
+            </SocialIcon>
+            <SocialIcon href="/assets/documents/CV.pdf" download>
+              <span className="font-semibold text-sm">CV</span>
+            </SocialIcon>
+          </div>
           <ThemeSwitch className="p-4"/>
         </div>
       </nav>

@@ -4,7 +4,7 @@ import Image from 'next/image'; // 1. Importer le composant Image
 
 function CompanyListItem({ experience, isSelected, onSelect }) {
   const itemClassName = `
-    flex items-center gap-4 p-4 cursor-pointer
+    flex items-center gap-4 p-2 md:p-4 cursor-pointer
     transition-all duration-300 ease-in-out
     border border-transparent
     ${isSelected 
@@ -20,20 +20,20 @@ function CompanyListItem({ experience, isSelected, onSelect }) {
         <Image
           src={experience.logo}
           alt={`${experience.company} logo`}
-          width={40}  // 3. Spécifier une largeur
-          height={40} // 4. Spécifier une hauteur
-          className="rounded-lg object-contain" // Appliquer les styles directement
+          width={40}
+          height={40}
+          className="rounded-lg object-contain"
         />
       </div>
 
       {/* Info : Nom et rôle */}
       <div className="flex-grow">
-        <div className="font-semibold">{experience.company}</div>
-        <div className="text-sm text-base-content/70">{experience.role}</div>
+        <div className="font-semibold text-sm md:text-base">{experience.company}</div>
+        <div className="text-xs md:text-sm">{experience.role}</div>
       </div>
 
       {/* Dates */}
-      <div className="text-xs font-mono whitespace-nowrap text-base-content/60">
+      <div className="text-xs font-mono text-base-content/60 text-right">
         {experience.dates}
       </div>
     </div>

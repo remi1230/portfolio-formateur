@@ -20,7 +20,7 @@ function CompanyDetails({ experience }) {
       transition={{ duration: 0.3 }}
       className="flex flex-col items-center text-center"
     >
-      <div className="h-20 avatar mb-6 p-3 hidden lg:flex">
+      <div className="avatar mb-6 hidden lg:flex">
         <Image
           src={experience.logo}
           alt={`${experience.company} logo`}
@@ -30,12 +30,12 @@ function CompanyDetails({ experience }) {
         />
       </div>
 
-      <h3 className="text-3xl font-extrabold text-base-content">{experience.company}</h3>
+      <h3 className="text-3xl font-extrabold">{experience.company}</h3>
 
       <div className="badge badge-accent badge-lg my-4">{experience.role}</div>
 
       <div
-        className="leading-relaxed text-left w-full pt-5"
+        className="leading-relaxed text-left w-full pt-5 md:text-base text-sm"
         dangerouslySetInnerHTML={{ __html: experience.description }}
       />
     </motion.div>
