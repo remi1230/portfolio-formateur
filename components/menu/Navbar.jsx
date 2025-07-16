@@ -60,7 +60,7 @@ export default function Navbar() {
               htmlFor="mobile-menu-toggle"
               tabIndex={0}
               role="button"
-              className="btn btn-ghost lg:hidden"
+              className="lg:hidden"
               onClick={handleMenuToggle}
             >
               {isMenuOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}

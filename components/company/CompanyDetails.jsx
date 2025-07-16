@@ -20,7 +20,7 @@ function CompanyDetails({ experience }) {
       transition={{ duration: 0.3 }}
       className="flex flex-col items-center text-center"
     >
-      <div className="avatar mb-6 hidden lg:flex">
+      <div className="w-[64px] h-[64px] havatar mb-6 hidden lg:flex">
         <Image
           src={experience.logo}
           alt={`${experience.company} logo`}
