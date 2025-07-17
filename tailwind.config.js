@@ -14,9 +14,6 @@ module.exports = {
         'brand-footer': 'var(--brand-footer)',
         'brand-fo': 'var(--brand-fo)',
       },
-      backgroundImage: {
-        'gdt-company-brand': 'linear-gradient(to bottom right, var(--gd-cpn-from), var(--gd-cpn-via), var(--gd-cpn-to))',
-      },
     },
   },
   plugins: [
