@@ -1,17 +1,30 @@
 'use client';
 
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+
 export default function NavItem({ href, label, onClick }) {
-  const handleClick = (e) => {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleClick = async (e) => {
     e.preventDefault();
     onClick?.();
 
     const targetId = href.replace(/^#/, '');
+
+    // Si on n'est pas déjà sur la racine, on navigue vers /
+    if (pathname !== '/') {
+      router.push(`/#${targetId}`);
+      return;
+    }
+
+    // Sinon on scroll comme avant
     const el = document.getElementById(targetId);
     if (!el) return;
 
     const header = document.querySelector('header');
     const headerHeight = header?.offsetHeight || 0;
-
     const style = window.getComputedStyle(el);
     const scrollMT = parseFloat(style.scrollMarginTop) || 0;
 

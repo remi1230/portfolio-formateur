@@ -6,18 +6,19 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+    fontWeight: {
+        'thin': '100',
+        'extralight': '200',
+        'light': '300',
+        'normal': '400',
+        'medium': '500',
+        'semibold': '600',
+        'bold': '700',
+        'extrabold': '800',
+        'black': '900',
+    },
     extend: {
-      colors: {
-        'brand-bg': 'var(--brand-bg)',
-        'brand-fg': 'var(--brand-fg)',
-        'brand-important': 'var(--brand-important)',
-        'brand-footer': 'var(--brand-footer)',
-        'brand-fo': 'var(--brand-fo)',
-      },
     },
   },
-  plugins: [
-    require("daisyui"),
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [],
 }

@@ -3,7 +3,7 @@ import ContactTestimony from './ContactTestimony';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="bg-[#0f172a]rounded-xl mx-auto">
+    <section id="contact" className="bg-brand-bg rounded-xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
         Parlons de <span className="text-brand-important">votre projet</span>
       </h2>

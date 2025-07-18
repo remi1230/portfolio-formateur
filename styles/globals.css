@@ -1,59 +1,60 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
 
+/* 1. Définition des variables CSS réelles */
+@layer base {
+  :root {
+    --brand-bg: oklch(0.2034 0.04 265.69);
+    --brand-bg-card: oklch(0.2034 0.04 265.69);
+    --brand-fg-card-title: var(--color-slate-300);
+    --brand-fg-card-subtitle: var(--color-gray-400);
+    --brand-fg-card-date: var(--color-zinc-400);
+    --navbar-brand-bg: oklch(0.18 0.04 265.69 / 0.7);
+    --brand-fg: oklch(93% 0.01 255);
+    --brand-important: oklch(79% 0.19 155);
+    --brand-footer: #1e293b;
+    --brand-fo: #9ca3af;
+    --cpn-bold: oklch(100% 0.05 255);
+  }
+
+  [data-theme='light'] {
+    --brand-bg: var(--color-violet-200);
+    --brand-bg-card: var(--color-violet-950);
+    --brand-fg-card-title: var(--color-slate-200);
+    --brand-fg-card-subtitle: var(--color-gray-300);
+    --brand-fg-card-date: var(--color-zinc-400);
+    --navbar-brand-bg: oklch(81.1% 0.111 293.571 / 0.7);
+    --brand-fg: var(--color-slate-700);
+    --brand-important: var(--color-orange-600);
+    --brand-footer: var(--color-violet-300);
+    --brand-fo: var(--color-slate-500);
+    --cpn-bold: var(--color-slate-700);
+  }
+}
+
+
+
+/* 2. Exposition des variables pour générer utilitaires */
 @theme {
-  --font-display: "Satoshi", "sans-serif";
-  --breakpoint-3xl: 120rem;
-  --color-avocado-100: oklch(0.99 0 0);
-  --color-avocado-200: oklch(0.98 0.04 113.22);
-  --color-avocado-300: oklch(0.94 0.11 115.03);
-  --color-avocado-400: oklch(0.92 0.19 114.08);
-  --color-avocado-500: oklch(0.84 0.18 117.33);
-  --color-avocado-600: oklch(0.53 0.12 118.34);
-  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
-  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
-  /* ... */
+  --color-brand-bg: var(--brand-bg);
+  --color-brand-bg-card: var(--brand-bg-card);
+  --color-brand-fg-card-title: var(--brand-fg-card-title);
+  --color-brand-fg-card-subtitle: var(--brand-fg-card-subtitle);
+  --color-brand-fg-card-date: var(--brand-fg-card-date);
+  --color-navbar-brand-bg: var(--navbar-brand-bg);
+  --color-brand-fg: var(--brand-fg);
+  --color-brand-important: var(--brand-important);
+  --color-brand-footer: var(--brand-footer);
+  --color-brand-fo: var(--brand-fo);
+  --color-cpn-bold: var(--cpn-bold);
 }
 
-:root {
-  --brand-bg: oklch(0.2034 0.04 265.69);
-  --navbar-brand-bg: 0.1634 0.04 265.69;;
-  --brand-fg: oklch(93% 0.01 255);
-  --brand-important: oklch(79% 0.19 155);
-  --brand-footer: #1e293b;
-  --brand-fo: #9ca3af;
-  --cpn-bold: oklch(100% 0.05 255);
-}
-
-[data-theme='light'] {
-  --brand-bg: oklch(89.4% 0.057 293.283);
-  --navbar-brand-bg: 81.1% 0.111 293.571;
-  --brand-fg: oklch(37.2% 0.044 257.287);
-  --brand-important: oklch(64.6% 0.222 41.116);
-  --brand-footer: #827fb3;
-  --brand-fo: #4c5e7f;
-  --cpn-bold: oklch(30.058% 0.01873 196.301);
-}
-
+/* 3. Styles utilitaires */
 .gradient-cpn-bg {
   @apply bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900;
 }
 
 [data-theme='light'] .gradient-cpn-bg {
   @apply bg-gradient-to-br from-violet-100 via-violet-200 to-violet-300;
-}
-
-
-[data-theme='lightSave'] {
-  --brand-bg: oklch(0.76 0.05 276.8);
-  --navbar-brand-bg: 59.44% 0.05722 276.193;
-  --brand-fg: oklch(33% 0.01 255);
-  --brand-important: oklch(0.62 0.20 53.77);
-  --brand-footer: #827fb3;
-  --brand-fo: #4c5e7f;
-  --cpn-bold: oklch(30.058% 0.01873 196.301);
-  --gd-cpn-from: #e0e7ff;
-  --gd-cpn-via: #c7d2fe;
-  --gd-cpn-to:  #a5b4fc;
 }

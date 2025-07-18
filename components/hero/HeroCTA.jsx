@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { ExternalLink } from 'lucide-react';
+
 
 export default function HeroCTA() {
   return (
@@ -10,10 +12,10 @@ export default function HeroCTA() {
         Me contacter
       </Link>
       <Link
-        href="#projects"
+        href="/article"
         className="px-6 py-2 btn btn-outline hover:bg-brand-important hover:text-brand-fg transition-colors duration-300"
       >
-        Voir mes projets
+        Articles <ExternalLink size={20} className="inline-block ml-1" />
       </Link>
     </div>
   );

@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 export default function ContactTestimony() {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 prose">
       <h3 className="text-sm font-bold tracking-wide uppercase">ENEDIS</h3>
       <blockquote className="italic">
-        <span className="text-4xl leading-none">“</span>
+        <span className="text-4xl">“</span>
         Merci à Rémi pour son implication et son travail de qualité dans le développement de notre portail web. Son intervention a permis 
         l’installation fluide de notre nouveau service.
       </blockquote>

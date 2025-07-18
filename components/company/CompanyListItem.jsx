@@ -1,5 +1,4 @@
 // src/components/Company/CompanyListItem.jsx
-
 import Image from 'next/image'; // 1. Importer le composant Image
 
 function CompanyListItem({ experience, isSelected, onSelect }) {

@@ -1,5 +1,5 @@
 // src/components/Company/CompanyDetails.jsx
-
+import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import { motion } from 'framer-motion'; // <<< ADDED THIS LINE
 
@@ -34,10 +34,9 @@ function CompanyDetails({ experience }) {
 
       <div className="badge badge-accent badge-lg my-4">{experience.role}</div>
 
-      <div
-        className="leading-relaxed text-left w-full pt-5 md:text-base text-sm"
-        dangerouslySetInnerHTML={{ __html: experience.description }}
-      />
+      <article className="pt-4 prose prose-sm md:prose-base prose-slate dark:prose-invert max-w-none text-left">
+          <ReactMarkdown>{experience.description}</ReactMarkdown>
+      </article>
     </motion.div>
   );
 }
