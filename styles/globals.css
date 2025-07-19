@@ -7,10 +7,12 @@
   :root {
     --brand-bg: oklch(0.2034 0.04 265.69);
     --brand-bg-card: oklch(0.2034 0.04 265.69);
+    --brand-navbar-bg: oklch(0.18 0.04 265.69 / 0.7);
+    --brand-pre-bg: var(--color-slate-700);
+    --brand-pre-fg: var(--color-slate-300);
     --brand-fg-card-title: var(--color-slate-300);
     --brand-fg-card-subtitle: var(--color-gray-400);
     --brand-fg-card-date: var(--color-zinc-400);
-    --navbar-brand-bg: oklch(0.18 0.04 265.69 / 0.7);
     --brand-fg: oklch(93% 0.01 255);
     --brand-important: oklch(79% 0.19 155);
     --brand-footer: #1e293b;
@@ -21,10 +23,12 @@
   [data-theme='light'] {
     --brand-bg: var(--color-violet-200);
     --brand-bg-card: var(--color-violet-950);
+    --brand-pre-bg: var(--color-slate-700);
+    --brand-pre-fg: var(--color-slate-300);
     --brand-fg-card-title: var(--color-slate-200);
     --brand-fg-card-subtitle: var(--color-gray-300);
     --brand-fg-card-date: var(--color-zinc-400);
-    --navbar-brand-bg: oklch(81.1% 0.111 293.571 / 0.7);
+    --brand-navbar-bg: oklch(81.1% 0.111 293.571 / 0.7);
     --brand-fg: var(--color-slate-700);
     --brand-important: var(--color-orange-600);
     --brand-footer: var(--color-violet-300);
@@ -39,10 +43,13 @@
 @theme {
   --color-brand-bg: var(--brand-bg);
   --color-brand-bg-card: var(--brand-bg-card);
+  --color-brand-pre-bg: var(--brand-pre-bg);
+  --color-brand-pre-fg: var(--brand-pre-fg);
   --color-brand-fg-card-title: var(--brand-fg-card-title);
   --color-brand-fg-card-subtitle: var(--brand-fg-card-subtitle);
   --color-brand-fg-card-date: var(--brand-fg-card-date);
-  --color-navbar-brand-bg: var(--navbar-brand-bg);
+  --color-brand-bg-highlight: var(--brand-bg-highlight);
+  --color-brand-navbar-bg: var(--brand-navbar-bg);
   --color-brand-fg: var(--brand-fg);
   --color-brand-important: var(--brand-important);
   --color-brand-footer: var(--brand-footer);

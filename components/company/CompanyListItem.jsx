@@ -3,7 +3,7 @@ import Image from 'next/image'; // 1. Importer le composant Image
 
 function CompanyListItem({ experience, isSelected, onSelect }) {
   const itemClassName = `
-    flex items-center gap-4 p-2 md:p-4 cursor-pointer
+    flex items-center  gap-4 p-2 md:p-4 cursor-pointer
     transition-all duration-300 ease-in-out
     border border-transparent
     ${isSelected 

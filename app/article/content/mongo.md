@@ -60,7 +60,7 @@ mongod
 
 ## Connexion avec Node.js
 
-Utilise la bibliothèque officielle `mongodb` pour Node.js :
+Utilisez la bibliothèque officielle `mongodb` pour Node.js :
 
 ```bash
 npm install mongodb

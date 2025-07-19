@@ -25,6 +25,7 @@ export default function ThemeSwitch() {
 
       {/* Toggle switch */}
       <input
+        id="toggle-theme"
         type="checkbox"
         className="toggle"
         checked={isLight}

@@ -44,7 +44,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur bg-navbar-brand-bg bg-opacity-70">
+    <header className="sticky top-0 z-50 backdrop-blur bg-brand-navbar-bg bg-opacity-70">
       <nav className="navbar max-w-screen-xl mx-auto py-0.5">
         <div className="navbar-start">
           <div className="dropdown" ref={dropdownRef}>

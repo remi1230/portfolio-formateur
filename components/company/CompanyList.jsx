@@ -18,6 +18,7 @@ function CompanyList({ experiences, selectedCompanyId, onCompanySelect }) {
       {/* Liste déroulante en mobile */}
       <div className="block lg:hidden mt-4">
         <select
+          id="company-select"
           className="select select-bordered w-full bg-brand-bg"
           value={selectedCompanyId}
           onChange={(e) => onCompanySelect(Number(e.target.value))}

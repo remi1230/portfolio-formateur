@@ -14,16 +14,19 @@ export default function ArticleListPage() {
           <Link
             key={article.slug}
             href={`/article/${article.slug}`}
-            className="card flex flex-col h-full bg-brand-bg-card border border-gray-300 shadow-xl
-            transition duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] cursor-pointer"
+            className="card group flex flex-col h-full bg-brand-bg-card border border-gray-300
+            shadow-md transition duration-300 ease-in-out transform-gpu hover:shadow-lg
+            hover:ring-2 hover:ring-brand-important hover:scale-102 hover:-translate-y-1 cursor-pointer
+            will-change-transform"
             >
             <figure className="p-4 w-full h-40 flex items-center justify-center overflow-hidden">
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-full flex justify-center">
                 <Image
                     src={article.illustration}
                     alt={article.title}
-                    fill
-                    priority
+                    width={200}
+                    height={200}
+                    unoptimized
                     className="object-contain"
                 />
                 </div>

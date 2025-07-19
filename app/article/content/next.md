@@ -135,4 +135,4 @@ Mais aussi sur Netlify, Docker, ou OVH via l’adaptation du serveur Node.js.
 Next.js est un **framework puissant et complet** pour créer des sites web modernes avec React.
 Il allie **performance, simplicité de développement, SEO, accessibilité**, et **flexibilité**, ce qui en fait l’un des outils les plus adoptés aujourd’hui.
 
-> Si tu sais déjà utiliser React, apprendre Next.js est une suite logique et très enrichissante.
+> Si vous savez déjà utiliser React, apprendre Next.js est une suite logique et très enrichissante.

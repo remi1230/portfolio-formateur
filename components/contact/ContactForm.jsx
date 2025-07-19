@@ -45,6 +45,7 @@ export default function ContactForm() {
           placeholder="John Doe"
           className="input input-bordered w-full bg-brand-bg placeholder-brand-fo"
           required
+          autoComplete="autoComplete"
         />
         <input
           type="email"
@@ -54,6 +55,7 @@ export default function ContactForm() {
           placeholder="john.doe@gmail.com"
           className="input input-bordered w-full bg-brand-bg placeholder-brand-fo"
           required
+          autoComplete="autoComplete"
         />
       </div>
 

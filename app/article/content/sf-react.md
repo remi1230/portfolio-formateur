@@ -15,7 +15,7 @@ L’association de **Symfony** côté backend et **React** côté frontend const
 
 ## Architecture recommandée
 
-```
+```bash
 /mon-projet
 ├── /api        ← Symfony (PHP, API Platform ou pure REST)
 └── /frontend   ← React (Vite ou CRA, ou Next.js)
@@ -29,7 +29,7 @@ Les deux parties communiquent via des appels HTTP (ou GraphQL), souvent avec l�
 
 ### Route dans un contrôleur
 
-```php
+```js
 // src/Controller/Api/UserController.php
 #[Route('/api/users', methods: ['GET'])]
 public function list(): JsonResponse {

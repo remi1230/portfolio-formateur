@@ -77,7 +77,7 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
 
-Puis dans ton fichier CSS global (`globals.css`) :
+Puis dans votre fichier CSS global (`globals.css`) :
 
 ```css
 @tailwind base;
@@ -85,7 +85,7 @@ Puis dans ton fichier CSS global (`globals.css`) :
 @tailwind utilities;
 ```
 
-Et assure-toi que le fichier est bien importé dans ton projet.
+Et assurez-vous que le fichier est bien importé dans ton projet.
 
 ---
 
@@ -97,13 +97,13 @@ Le plugin Typography améliore l’affichage du contenu riche (Markdown, article
 npm install -D @tailwindcss/typography
 ```
 
-Ajoute-le dans la configuration :
+Ajoutez-le dans la configuration :
 
 ```js
 plugins: [require('@tailwindcss/typography')],
 ```
 
-Et utilise la classe `prose` :
+Et utilisez la classe `prose` :
 
 ```jsx
 <article className="prose dark:prose-invert">

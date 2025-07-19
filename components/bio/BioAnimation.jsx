@@ -9,7 +9,6 @@ export default function BioAnimation() {
         fill
         sizes="(min-width: 512px) 40vw, 100vw"
         className="object-contain"
-        priority
         unoptimized
       />
     </div>

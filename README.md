@@ -5,10 +5,10 @@
 ### 🧱 Stack technique utilisée
 
 * **Next.js 14** — Framework React pour le web moderne
-* **Tailwind CSS** — Framework CSS utilitaire
-* **daisyUI** — Composants UI basés sur Tailwind
+* **Tailwind CSS v4** — Framework CSS utilitaire
+* **daisyUI v5** — Composants UI basés sur Tailwind
 * **Framer Motion** — Animations fluides pour React
-* **Node.js 18-alpine** — Environnement léger Node
+* **Node.js 20.11.1-alpine** — Environnement léger Node
 * **Docker & Docker Compose** — Conteneurisation de l'app
 * **Nginx** — Reverse proxy
 * **Cloudflare** — Gestion HTTPS et DNS
