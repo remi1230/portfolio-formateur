@@ -9,7 +9,9 @@
     --brand-bg-card: oklch(0.2034 0.04 265.69);
     --brand-navbar-bg: oklch(0.18 0.04 265.69 / 0.7);
     --brand-pre-bg: var(--color-slate-700);
-    --brand-pre-fg: var(--color-slate-300);
+    --brand-pre-fg: var(--color-slate-700);
+    --brand-bordcode-fg: var(--color-slate-300);
+    --brand-bordcode-w: 1;
     --brand-fg-card-title: var(--color-slate-300);
     --brand-fg-card-subtitle: var(--color-gray-400);
     --brand-fg-card-date: var(--color-zinc-400);
@@ -25,6 +27,8 @@
     --brand-bg-card: var(--color-violet-950);
     --brand-pre-bg: var(--color-slate-700);
     --brand-pre-fg: var(--color-slate-300);
+    --brand-bordcode-fg: var(--color-red-800);
+    --brand-bordcode-w: 2;
     --brand-fg-card-title: var(--color-slate-200);
     --brand-fg-card-subtitle: var(--color-gray-300);
     --brand-fg-card-date: var(--color-zinc-400);
@@ -45,6 +49,8 @@
   --color-brand-bg-card: var(--brand-bg-card);
   --color-brand-pre-bg: var(--brand-pre-bg);
   --color-brand-pre-fg: var(--brand-pre-fg);
+  --color-brand-bordcode-fg: var(--brand-bordcode-fg);
+  --color-brand-bordcode-w: var(--brand-bordcode-w);
   --color-brand-fg-card-title: var(--brand-fg-card-title);
   --color-brand-fg-card-subtitle: var(--brand-fg-card-subtitle);
   --color-brand-fg-card-date: var(--brand-fg-card-date);

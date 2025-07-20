@@ -2,18 +2,21 @@
 import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
-// ReactMarkdown, rehypeRaw, remarkGfm ne sont plus directement nécessaires ici
-// car ils sont encapsulés dans MarkdownRenderer
-// import ReactMarkdown from 'react-markdown';
-// import rehypeRaw from 'rehype-raw';
-// import remarkGfm from 'remark-gfm';
-import { articlesData } from '../data'; // Assurez-vous que le chemin est correct
+import { articlesData } from '../data';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpCircle } from 'lucide-react';
+import dynamic from 'next/dynamic'; // Importez dynamic de next/dynamic
 
-// Importez le nouveau composant client
-import MarkdownRenderer from '../../../components/utils/MarkdownRenderer';
+// Importez le composant MarkdownRenderer que nous avons créé.
+// Nous allons le charger dynamiquement.
+// import MarkdownRenderer from '../../components/MarkdownRenderer'; // Ne l'importez plus directement ici
+
+// Chargez dynamiquement le MarkdownRenderer avec SSR désactivé
+const DynamicMarkdownRenderer = dynamic(
+  () => import('../../../components/utils/MarkdownRenderer'),
+  { ssr: false } // Ceci est la clé : ne pas rendre ce composant côté serveur
+);
 
 
 export async function generateStaticParams() {
@@ -26,12 +29,10 @@ export default async function ArticlePage({ params }) {
   const article = articlesData.find((a) => a.slug === params.slug);
   if (!article) notFound();
 
-  // Next.js Server Components peuvent lire des fichiers directement
   const filePath = path.join(process.cwd(), 'app/article/content', `${params.slug}.md`);
   const fileContent = fs.readFileSync(filePath, 'utf8');
 
   return (
-    // La classe 'prose' principale est sur la balise <main>
     <main id="page-top" className="scroll-mt-20 prose prose-slate dark:prose-invert max-w-5xl px-4 mx-auto py-8">
       {/* Bouton retour */}
       <Link
@@ -57,8 +58,15 @@ export default async function ArticlePage({ params }) {
       <h1>{article.title}</h1>
       <p className="text-sm text-gray-500">{article.chapeau} • {article.dates}</p>
 
-      {/* Utilisez le composant client pour le rendu du Markdown et la coloration */}
-      <MarkdownRenderer content={fileContent} />
+      {/* Utilisez le composant chargé dynamiquement ici */}
+      <DynamicMarkdownRenderer
+        content={fileContent}
+        // RETIREZ LA PROP rehypePlugins ENTIÈREMENT SI VOUS NE L'AVEZ PAS BESOIN AILLEURS
+        // OU SI VOUS L'AVEZ DANS LE MARKDOWNRENDERER, ASSUREZ-VOUS QU'ELLE EST RETIRÉE LÀ-BAS.
+        // Dans votre cas, MarkdownRenderer ne prend pas de prop rehypePlugins,
+        // donc le problème est dans l'appel interne de ReactMarkdown dans MarkdownRenderer.
+        // Nous allons donc nous concentrer sur la modification de MarkdownRenderer.jsx
+      />
       
       <div className="w-full flex justify-end gap-6">
         <Link

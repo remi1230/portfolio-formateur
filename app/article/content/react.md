@@ -106,4 +106,4 @@ function Timer() {
 React est aujourd’hui un **standard dans le développement web moderne**.  
 Sa flexibilité, sa simplicité de prise en main et son énorme communauté en font une solution de choix pour tout développeur frontend.
 
-👉 Que vous soyez débutant ou expérimenté, **React est un outil puissant et fiable** pour créer des interfaces interactives, maintenables et modernes.
+> Que vous soyez débutant ou expérimenté, **React est un outil puissant et fiable** pour créer des interfaces interactives, maintenables et modernes.

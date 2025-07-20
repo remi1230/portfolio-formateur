@@ -92,7 +92,7 @@ npm install --save-dev webpack webpack-cli
 
 ## Exemple simple de structure de projet
 
-```
+```bash
 my-app/
 ├── src/
 │   ├── index.js
@@ -121,4 +121,4 @@ my-app/
 Webpack est un outil puissant et personnalisable pour le développement web moderne.
 Il permet de construire des applications **maintenables, rapides et modulaires**, tout en gardant un contrôle fin sur le processus de build.
 
-👉 Si vous utilisez React, Vue ou tout autre framework JavaScript moderne, **maîtriser Webpack est un atout clé**.
+> Si vous utilisez React, Vue ou tout autre framework JavaScript moderne, **maîtriser Webpack est un atout clé**.

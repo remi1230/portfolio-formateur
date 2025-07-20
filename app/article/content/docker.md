@@ -86,4 +86,4 @@ services:
 
 Docker est devenu un **standard incontournable** pour les développeurs modernes. Il permet de créer des applications **fiables, reproductibles et portables**, en facilitant le travail en équipe et le déploiement.
 
-👉 Que vous soyez développeur, ops ou formateur, Docker est un outil à maîtriser pour gagner en efficacité.
+> Que vous soyez développeur, ops ou formateur, Docker est un outil à maîtriser pour gagner en efficacité.

@@ -11,33 +11,26 @@ Figma est une application web de **conception d’interfaces utilisateur (UI)** 
 
 ## Fonctionnalités clés
 
-<div className="lg:flex flex-row justify-between">
-
-<div>
-<strong className="text-lg">Outils de design puissants</strong>
+### Outils de design puissants
 
 - Des maquettes haute fidélité
 - Des composants réutilisables
 - Des prototypes interactifs
 - Des grilles, contraintes et auto-layouts
-</div>
-<div>
-<strong className="text-lg">Collaboration fluide</strong>
+
+### Collaboration fluide
 
 - Commentaires intégrés
 - Partage instantané via lien
 - Permissions granulaire
 - Historique de versions
-</div>
-<div>
-<strong className="text-lg">Intégration pour développeurs</strong>
+
+### Intégration pour développeurs
 
 - Exporter les assets
 - Accéder aux valeurs CSS, tailles et typographies
 - Copier directement les styles
-</div>
 
-</div>
 
 ## Cas d’usage
 
@@ -59,4 +52,4 @@ Figma est une application web de **conception d’interfaces utilisateur (UI)** 
 Figma est un outil puissant, accessible et collaboratif qui a transformé la manière dont les designers et les développeurs conçoivent ensemble.  
 Il convient aussi bien aux débutants qu’aux professionnels du design produit.
 
-👉 Que vous soyez freelance, dans une startup ou une grande entreprise, **Figma mérite une place dans votre boîte à outils.**
+> Que vous soyez freelance, dans une startup ou une grande entreprise, **Figma mérite une place dans votre boîte à outils.**
