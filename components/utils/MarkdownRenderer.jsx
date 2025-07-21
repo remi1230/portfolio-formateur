@@ -180,35 +180,33 @@ export default function MarkdownRenderer({ content }) {
     code: ({ node, inline, children, ...props }) => {
       // Destructurez la classe et le tabindex de ReactMarkdown pour <code>
       const { className: codeOriginalClassName, tabIndex: codeTabIndex, ...restCodeProps } = props;
-
-      // Si c'est du code inline
-      if (inline) {
+      //console.log(node);
+      
+      // Si ce n'est pas inline (c'est un <code> à l'intérieur d'un <pre>)
+      // On s'assure que la classe de langage est présente pour Prism.js
+      if (node && node.properties && node.properties.className) {
         return (
           <code
             className={clsx(
-              codeOriginalClassName, // Classes originales de ReactMarkdown pour le code inline
-              'bg-brand-bg-highlight',
-              'rounded-md',
-              'px-1'
+              codeOriginalClassName, // Classes originales de ReactMarkdown (ex: "language-bash")
             )}
             {...restCodeProps} // Passe les props restantes (sans className et tabIndex)
           >
-            {children} {/* Rendre les children directement pour le code inline */}
+            {children} {/* Rendre les children directement pour les blocs de code */}
           </code>
         );
-      }
-      // Si ce n'est pas inline (c'est un <code> à l'intérieur d'un <pre>)
-      // On s'assure que la classe de langage est présente pour Prism.js
+      } 
       return (
         <code
           className={clsx(
-            codeOriginalClassName, // Classes originales de ReactMarkdown (ex: "language-bash")
+            codeOriginalClassName,
           )}
           {...restCodeProps} // Passe les props restantes (sans className et tabIndex)
         >
-          {children} {/* Rendre les children directement pour les blocs de code */}
+          {children} {/* Rendre les children directement pour le code inline */}
         </code>
       );
+      
     },
   };
 

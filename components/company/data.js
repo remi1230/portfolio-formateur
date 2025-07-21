@@ -16,7 +16,8 @@ J'ai orchestré la **modernisation complète d'applications essentielles**, en l
 
 Mon rôle a couvert la **refonte et l'amélioration de systèmes clés**, la migration de bases de données volumineuses, et la mise en place de nouvelles fonctionnalités sur mesure.
 
-Cette approche innovante a permis d'**améliorer la performance et la stabilité des applications**. Grâce à une collaboration constante avec les équipes, j’ai veillé à ce que les solutions apportées offrent une réelle valeur ajoutée, en optimisant les processus internes et la qualité de service rendue aux usagers.
+Cette approche innovante a permis d'**améliorer la performance et la stabilité des applications**.
+En collaborant avec les équipes, j’ai veillé à ce que les solutions apportées offrent optimisent les processus internes et la qualité de service rendue aux usagers.
     `.trim()
   },
   {

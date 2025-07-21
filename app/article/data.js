@@ -7,6 +7,9 @@ const animSfReact  = '/assets/animations/sf-react.gif';
 const animDocker   = '/assets/animations/docker.gif';
 const animWebpack  = '/assets/animations/webpack.gif';
 const animStacks   = '/assets/animations/new-stacks.gif';
+const animRest     = '/assets/animations/api-rest.gif';
+const animVersion  = '/assets/animations/versionning.gif';
+const animHeberg   = '/assets/animations/auto-hebergement.gif';
 
 export const articlesData = [
   {
@@ -61,7 +64,7 @@ export const articlesData = [
   {
     slug: 'webpack',
     title: "Optimiser avec Webpack",
-    chapeau: "Une architecture robuste et modulable",
+    chapeau: "Optimiser les performances : l'outil de buiding indispensable",
     dates: "12 Mars 2025",
     illustration: animWebpack,
   },
@@ -71,5 +74,26 @@ export const articlesData = [
     chapeau: "Une architecture robuste et modulable",
     dates: "12 Mars 2025",
     illustration: animStacks,
+  },
+  {
+    slug: 'api-rest',
+    title: "Les APIs REST",
+    chapeau: "Simples et efficaces adoptées : un standard incontournable pour faire dialoguer les applications web",
+    dates: "22 Novembre 2024",
+    illustration: animRest,
+  },
+  {
+    slug: 'versionning',
+    title: "Le Versionning avec Git",
+    chapeau: "Simples et efficaces adoptées : un standard incontournable pour faire dialoguer les applications web",
+    dates: "11 Juillet 2024",
+    illustration: animVersion,
+  },
+  {
+    slug: 'auto-hebergement',
+    title: "L'auto hébergement",
+    chapeau: "Une alternative libre pour gérer ses propres sites web",
+    dates: "23 Mai 2024",
+    illustration: animHeberg,
   },
 ];

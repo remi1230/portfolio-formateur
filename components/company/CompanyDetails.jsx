@@ -34,7 +34,7 @@ function CompanyDetails({ experience }) {
 
       <div className="badge badge-accent badge-lg my-4">{experience.role}</div>
 
-      <article className="pt-4 prose prose-sm md:prose-base prose-slate dark:prose-invert max-w-none text-left">
+      <article className="pt-4 prose prose-sm 2xl:prose-base max-w-none text-left">
           <ReactMarkdown>{experience.description}</ReactMarkdown>
       </article>
     </motion.div>

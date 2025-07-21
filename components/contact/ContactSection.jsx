@@ -7,7 +7,7 @@ export default function ContactSection() {
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
         Parlons de <span className="text-brand-important">votre projet</span>
       </h2>
-      <p className="mb-8">
+      <p className="mb-8 prose">
         Vous pouvez également me contacter par un mail :
         <a href="mailto:remitafforeau@gmail.com" className="link px-1">
           remitafforeau@gmail.com
