@@ -20,7 +20,7 @@ function CompanyDetails({ experience }) {
       transition={{ duration: 0.3 }}
       className="flex flex-col items-center text-center"
     >
-      <div className="w-[64px] h-[64px] havatar mb-6 hidden lg:flex">
+      <div className="w-[64px] h-[64px] hidden md:block mb-0 mt-6 xl:mt-0 xl:mb-6">
         <Image
           src={experience.logo}
           alt={`${experience.company} logo`}
@@ -30,11 +30,11 @@ function CompanyDetails({ experience }) {
         />
       </div>
 
-      <h3 className="text-3xl font-extrabold">{experience.company}</h3>
+      <h3 className="hidden xl:block text-4xl font-extrabold">{experience.company}</h3>
 
-      <div className="badge badge-accent badge-lg my-4">{experience.role}</div>
+      <div className="badge badge-accent badge-lg mt-4 mb-2 md:mt-7 md:mb-7 text-sm md:text-base">{experience.role}</div>
 
-      <article className="pt-4 prose prose-sm 2xl:prose-base max-w-none text-left">
+      <article className="prose prose-sm 2xl:prose-base max-w-none text-left">
           <ReactMarkdown>{experience.description}</ReactMarkdown>
       </article>
     </motion.div>

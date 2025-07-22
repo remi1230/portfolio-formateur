@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react'; // Importez useState et useMemo
 import Link from 'next/link';
 import Image from 'next/image';
+import Pagination from './Pagination';
 import { articlesData } from './data'; // Assurez-vous que articlesData est bien un tableau d'articles
 import clsx from 'clsx'; // Pour fusionner les classes Tailwind si nécessaire
 import { motion, AnimatePresence } from 'framer-motion'; // Importez motion et AnimatePresence
@@ -41,15 +42,24 @@ const defaultTransition = { duration: 0.5, ease: "easeInOut" };
 
 
   return (
-    <main className="px-4 py-8 md:px-12 max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-center">Articles</h1>
-
+    <main className="2xl:px-12 md:px-24 px-12 py-8 2xl:max-w-5xl max-w-6xl mx-auto">
+      <div className="flex flex-col md:flex-row justify-center gap-4 pb-2">
+        <h1 className="text-3xl font-bold text-center">Articles</h1>
+        <div className="block 2xl:hidden">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPaginate={paginate}
+          />
+        </div>
+      </div>
       {/* Grille des articles */}
       {/* AnimatePresence permet d'animer les composants qui sont retirés de l'arbre DOM */}
       <AnimatePresence mode="wait"> {/* 'wait' attend que l'animation de sortie soit terminée avant d'animer l'entrée */}
         <motion.div
           key={currentPage} // C'est crucial : changer la clé force Framer Motion à considérer que c'est un "nouveau" composant et à déclencher l'animation
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 p-4 md:grid-cols-2 lg:grid-cols-3 gap-6 relative
+          overflow-x-hidden max-h-[64vh] xl:max-h-none"
           variants={zoomVariants} // Utilisez les variantes définies
           initial="initial"
           animate="animate"
@@ -60,18 +70,17 @@ const defaultTransition = { duration: 0.5, ease: "easeInOut" };
             <Link
               key={article.slug}
               href={`/article/${article.slug}`}
-              className="card group flex flex-col h-full bg-brand-bg-card border border-gray-300
+              className="relative z-10 card  flex flex-col h-full bg-brand-bg-card border border-gray-300
               shadow-md transition duration-300 ease-in-out transform-gpu hover:shadow-lg
               hover:ring-2 hover:ring-brand-important hover:scale-102 hover:-translate-y-1 cursor-pointer
               will-change-transform"
             >
-              <figure className="p-4 w-full h-40 flex items-center justify-center overflow-hidden">
-                  <div className="relative w-full h-full flex justify-center">
+              <figure className="p-4 w-full flex items-center justify-center overflow-hidden">
+                  <div className="relative 2xl:w-30 2xl:h-30 w-20 h-20">
                   <Image
                       src={article.illustration}
                       alt={article.title}
-                      width={200}
-                      height={200}
+                      fill
                       unoptimized
                       className="object-contain"
                   />
@@ -90,56 +99,13 @@ const defaultTransition = { duration: 0.5, ease: "easeInOut" };
           ))}
         </motion.div>
       </AnimatePresence>
-
-      {/* Composant de pagination */}
-      {totalPages > 1 && ( // Afficher la pagination seulement s'il y a plus d'une page
-        <nav className="flex justify-center mt-8">
-          <ul className="pagination flex space-x-2">
-            {/* Bouton Précédent */}
-            <li>
-              <button
-                onClick={() => paginate(currentPage - 1)}
-                disabled={currentPage === 1}
-                className={clsx(
-                  "btn btn-sm btn-outline",
-                  { "btn-disabled": currentPage === 1 } // DaisyUI class for disabled button
-                )}
-              >
-                Précédent
-              </button>
-            </li>
-
-            {/* Numéros de page */}
-            {pageNumbers.map(number => (
-              <li key={number}>
-                <button
-                  onClick={() => paginate(number)}
-                  className={clsx(
-                    "btn btn-sm btn-outline",
-                    { "btn-active": number === currentPage, "btn-important": number === currentPage } // DaisyUI active classes
-                  )}
-                >
-                  {number}
-                </button>
-              </li>
-            ))}
-
-            {/* Bouton Suivant */}
-            <li>
-              <button
-                onClick={() => paginate(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className={clsx(
-                  "btn btn-sm btn-outline",
-                  { "btn-disabled": currentPage === totalPages } // DaisyUI class for disabled button
-                )}
-              >
-                Suivant
-              </button>
-            </li>
-          </ul>
-        </nav>
-      )}
+      <div className="mt-4 hidden 2xl:block">
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPaginate={paginate}
+        />
+      </div>
     </main>
   );
 }

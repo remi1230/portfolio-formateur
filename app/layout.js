@@ -13,9 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr" className={`${inter.className} scroll-smooth transition-colors duration-300 bg-brand-bg text-brand-fg`}>
       <head />
-      <body className="min-h-screen">
+      <body className="flex flex-col min-h-screen">
         <Navbar />
-        {children}
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

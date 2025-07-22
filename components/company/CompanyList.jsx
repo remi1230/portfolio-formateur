@@ -5,7 +5,7 @@ import CompanyListItem from './CompanyListItem';
 function CompanyList({ experiences, selectedCompanyId, onCompanySelect }) {
   return (
     <div className="">
-      <div className="border-2 border-gray-700 rounded-xl lg:overflow-hidden lg:block hidden max-h-64 lg:max-h-none overflow-y-auto">
+      <div className="border-2 border-gray-700 rounded-xl xl:overflow-hidden xl:block hidden max-h-64 xl:max-h-none overflow-y-auto">
         {experiences.map(exp => (
           <CompanyListItem
             key={exp.id}
@@ -16,7 +16,7 @@ function CompanyList({ experiences, selectedCompanyId, onCompanySelect }) {
         ))}
       </div>
       {/* Liste déroulante en mobile */}
-      <div className="block lg:hidden mt-4">
+      <div className="block xl:hidden mt-0 md:mt-4">
         <select
           id="company-select"
           className="select select-bordered w-full bg-brand-bg"

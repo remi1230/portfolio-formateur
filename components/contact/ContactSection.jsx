@@ -3,7 +3,7 @@ import ContactTestimony from './ContactTestimony';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="bg-brand-bg rounded-xl mx-auto">
+    <section id="contact" className="bg-brand-bg rounded-xl xl:mx-auto mx-0">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
         Parlons de <span className="text-brand-important">votre projet</span>
       </h2>
@@ -14,7 +14,7 @@ export default function ContactSection() {
         </a>
       </p>
 
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid xl:grid-cols-[12fr_7fr] gap-10">
         <ContactForm />
         <ContactTestimony />
       </div>

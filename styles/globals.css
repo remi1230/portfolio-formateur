@@ -25,6 +25,8 @@
     --brand-important: oklch(79% 0.19 155);
     --brand-footer: #1e293b;
     --brand-fo: #9ca3af;
+    --brand-hover-menu: #ffffff;
+    --brand-hover-brd-menu: transparent;
     --cpn-bold: oklch(100% 0.05 255);
   }
 
@@ -39,7 +41,7 @@
     --brand-message-bdr: var(--color-slate-400);
     --brand-message-strong: var(--color-slate-900);
     --brand-bordcode-w: 2;
-    --brand-fg-card-title: var(--color-slate-700);
+    --brand-fg-card-title: var(--color-slate-200);
     --brand-fg-card-subtitle: var(--color-gray-300);
     --brand-fg-card-date: var(--color-zinc-400);
     --brand-navbar-bg: oklch(86% 0.08 294.53 / 0.7);
@@ -48,6 +50,8 @@
     --brand-important: var(--color-orange-600);
     --brand-footer: oklch(86% 0.07 294.53);
     --brand-fo: var(--color-slate-500);
+    --brand-hover-menu: var(--color-purple-500);
+    --brand-hover-brd-menu: var(--color-purple-300);
     --cpn-bold: var(--color-slate-700);
   }
 }
@@ -141,6 +145,8 @@
   --color-brand-important: var(--brand-important);
   --color-brand-footer: var(--brand-footer);
   --color-brand-fo: var(--brand-fo);
+  --color-brand-hover-menu: var(--brand-hover-menu);
+  --color-brand-hover-brd-menu: var(--brand-hover-brd-menu);
   --color-cpn-bold: var(--cpn-bold);
 }
 

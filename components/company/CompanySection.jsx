@@ -12,11 +12,11 @@ function CompanySection() {
   const selectedCompany = experiencesData.find(exp => exp.id === selectedCompanyId);
 
   return (
-    <section  id="projects" className="scroll-mt-20 min-h-[33vw] pb-4 pt-10 pr-2 md:pr-6 rounded-2xl gradient-cpn-bg">
-      <div className="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto">
+    <section  id="projects" className="md:p-10 p-2 scroll-mt-20 min-h-[33vw] rounded-2xl gradient-cpn-bg">
+      <div className="flex flex-col xl:flex-row xl:gap-10 max-w-7xl mx-auto">
         
         {/* --- COLONNE DE GAUCHE : DÉTAILS DE L'ENTREPRISE --- */}
-        <div className="lg:w-1/2 p-2 md:p-8 rounded-xl h-fit order-2 lg:order-none">
+        <div className="xl:w-1/2 rounded-xl h-fit order-2 xl:order-none">
           <AnimatePresence mode="wait">
             {selectedCompany ? (
               <CompanyDetails
@@ -32,11 +32,11 @@ function CompanySection() {
         </div>
 
         {/* --- COLONNE DE DROITE : LISTE DES ENTREPRISES --- */}
-        <div className="lg:w-1/2 pl-6 lg:pl-0 order-1 lg:order-none">
-          <h2 className="lg:text-4xl text-2xl font-bold mb-2">
+        <div className="xl:w-1/2 order-1 xl:order-none">
+          <h2 className="xl:text-4xl text-2xl font-bold mb-2">
             C'était un réel plaisir de <span className="text-brand-important">travailler ensemble</span>
           </h2>
-          <p className="mb-8 lg:text-base text-sm">
+          <p className="mb-2 md:mb-8 xl:text-base text-sm">
             Merci à toutes les entreprises qui m'ont fait confiance ↓
           </p>
           <CompanyList

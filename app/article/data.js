@@ -35,8 +35,8 @@ export const articlesData = [
   },
   {
     slug: 'next',
-    title: "Next.js : un framework React",
-    chapeau: "Un framework puissant et complet pour créer des sites web modernes avec React",
+    title: "Next.js et React",
+    chapeau: "Un framework pour créer des sites web modernes avec React",
     dates: "12 Juillet 2025",
     illustration: animNext,
   },

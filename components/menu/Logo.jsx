@@ -22,7 +22,8 @@ export default function Logo() {
     <a
       href="/"
       onClick={handleClick}
-      className="btn btn-ghost py-6 rounded-xl hover:bg-white/10 flex items-center space-x-0 md:space-x-1 cursor-pointer"
+      className="btn btn-ghost py-6 rounded-xl hover:bg-brand-hover-menu/10 flex items-center space-x-0 md:space-x-1 cursor-pointer
+      border border-transparent hover:border-brand-hover-brd-menu transition-colors duration-300"
     >
       <Image
         src="/assets/images/logoSite.png"

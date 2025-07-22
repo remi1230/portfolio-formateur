@@ -42,7 +42,8 @@ export default function NavItem({ href, label, onClick }) {
       <a
         href={href}
         onClick={handleClick}
-        className="btn btn-ghost btn-sm px-4 py-6 rounded-xl text-sm font-medium hover:bg-white/10"
+        className="btn btn-ghost btn-sm px-4 py-6 rounded-xl text-sm font-medium hover:bg-brand-hover-menu/10
+        border border-transparent hover:border-brand-hover-brd-menu transition-colors duration-300"
       >
         {label}
       </a>
