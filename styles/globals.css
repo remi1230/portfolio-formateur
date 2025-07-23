@@ -10,6 +10,8 @@
     --brand-bg-card: oklch(0.2034 0.04 265.69);
     --brand-navbar-bg: oklch(0.18 0.04 265.69 / 0.7);
     --brand-pre-bg: var(--color-slate-700);
+    --brand-prose-fg: oklch(97.807% 0.029 256.847 / 0.8);
+    --brand-strong-fg: oklch(97.807% 0.029 256.847);
     --brand-pre-fg: var(--color-slate-700);
     --brand-placeholder-fg: var(--color-zinc-400);
     --brand-bordcode-bg: var(--color-slate-300);
@@ -34,6 +36,8 @@
     --brand-bg: var(--color-violet-200);
     --brand-bg-card: var(--color-violet-950);
     --brand-pre-bg: var(--color-slate-700);
+    --brand-prose-fg: oklch(21% 0.006 285.885 / 0.8);
+    --brand-strong-fg: oklch(21% 0.006 285.885);
     --brand-pre-fg: var(--color-slate-300);
     --brand-placeholder-fg: var(--color-slate-400);
     --brand-bordcode-bg: var(--color-base-200);
@@ -59,11 +63,13 @@
 @layer utilities {
   .prose{
     font-weight: var(--brand-prose-weight) !important;
+    color: var(--brand-prose-fg) !important;
   }
 
-  .prose-lg{
-    font-weight: var(--brand-prose-weight) !important;
+  .prose strong, .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6, .prose blockquote, .prose hr{
+    color: var(--brand-strong-fg, currentColor) !important;
   }
+
   :where(code):not(pre > code){
     color: var(--brand-bordcode-fg) !important;
     background-color: var(--brand-bordcode-bg) !important;
@@ -131,6 +137,8 @@
   --color-brand-bg-card: var(--brand-bg-card);
   --color-brand-pre-bg: var(--brand-pre-bg);
   --color-brand-pre-fg: var(--brand-pre-fg);
+  --color-brand-prose-fg: var(--brand-prose-fg);
+  --color-brand-strong-fg: var(--brand-strong-fg);
   --color-brand-placeholder-fg: var(--brand-placeholder-fg);
   --color-brand-bordcode-fg: var(--brand-bordcode-fg);
   --color-brand-message-bdr: var(--brand-message-bdr);

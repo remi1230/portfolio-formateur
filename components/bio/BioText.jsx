@@ -7,7 +7,7 @@ export default function BioText() {
 
       <div className="prose prose-sm xl:prose-lg">
         <p>
-          Je conçois des applications sur mesure avec <strong>Symfony</strong>, <strong>React</strong> ou <strong>Next.js</strong> pour répondre aux vrais besoins métier.
+          Je conçois des applications sur mesure avec <strong className="text-brand-prose-fg">Symfony</strong>, <strong>React</strong> ou <strong>Next.js</strong> pour répondre aux vrais besoins métier.
         </p>
         <p>
           Des acteurs comme <strong>ENEDIS</strong>, <strong>la CPAM</strong> ou <strong>l’UIMM</strong> m’ont fait confiance pour développer des solutions robustes et modernes.

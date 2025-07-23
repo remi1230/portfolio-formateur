@@ -5,6 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}"
   ],
+  darkMode: 'class',
   theme: {
     fontWeight: {
         'thin': '100',
@@ -23,4 +24,8 @@ module.exports = {
   plugins: [
     
   ],
+  daisyui: {
+    themes: ['light', 'dark'],
+    darkTheme: 'dark', // <- nécessaire pour certains composants
+  },
 }

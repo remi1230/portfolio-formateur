@@ -168,7 +168,7 @@ export default function ContactForm() {
           formats={formats}
           placeholder="Entrez votre message..."
           className={clsx(
-            "w-full bg-brand-bg text-brand-fg-card-title rounded-md",
+            "w-full rounded-md",
             { 'border-red-500 ring-red-500 ring-1': isSubmitted && errors.message,
               'quill-focus-styles' : isQuillFocused }
           )}

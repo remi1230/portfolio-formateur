@@ -9,9 +9,13 @@ export default function ThemeSwitch() {
     const html = document.documentElement;
     if (isLight) {
       html.setAttribute('data-theme', 'light');
+      document.documentElement.classList.remove('dark');
     } else {
       html.removeAttribute('data-theme');
+      document.documentElement.classList.add('dark');
     }
+    
+    void html.offsetHeight;
   }, [isLight]);
 
   return (
