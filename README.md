@@ -3,15 +3,24 @@
 ## 🚀 Installation
 
 ### 🧱 Stack technique utilisée
+* **Next.js 14.1.3** — Framework React moderne avec App Router
+* **React 18.2** — Bibliothèque JavaScript pour les interfaces interactives
+* **Tailwind CSS v4** *(non listé mais supposé utilisé)* — Framework utilitaire CSS
+* **daisyUI v5** *(non visible mais mentionné)* — Composants UI basés sur Tailwind CSS
+* **Framer Motion v10.12.16** — Animations fluides et naturelles pour React
+* **React Markdown v10.1.0** — Rendu Markdown côté client
+* **remark-gfm v4.0.1** — Support GitHub Flavored Markdown (liens, tableaux, etc.)
+* **PrismJS v1.30.0** + **prism-themes** — Coloration syntaxique des blocs de code
+* **React Quill v2.0.0 + Quill v2.0.3** — Éditeur de texte enrichi (WYSIWYG)
+* **Lucide React** — Icônes SVG modernes pour React
+* **React Icons v5.5.0** — Bibliothèque d’icônes regroupant FontAwesome, Material Icons, etc.
+* **clsx** — Gestion conditionnelle des classes CSS
+* **Nodemailer v7** — Envoi d’e-mails côté serveur
+* **Node.js 20.11.1 (alpine)** — Environnement léger Node utilisé via Docker
+* **Docker & Docker Compose** — Conteneurisation de l’application
+* **Nginx** — Reverse proxy pour la production
+* **Cloudflare** — Proxy DNS et gestion SSL (HTTPS)
 
-* **Next.js 14** — Framework React pour le web moderne
-* **Tailwind CSS v4** — Framework CSS utilitaire
-* **daisyUI v5** — Composants UI basés sur Tailwind
-* **Framer Motion** — Animations fluides pour React
-* **Node.js 20.11.1-alpine** — Environnement léger Node
-* **Docker & Docker Compose** — Conteneurisation de l'app
-* **Nginx** — Reverse proxy
-* **Cloudflare** — Gestion HTTPS et DNS
 
 ---
 

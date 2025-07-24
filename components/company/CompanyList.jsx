@@ -25,7 +25,7 @@ function CompanyList({ experiences, selectedCompanyId, onCompanySelect }) {
         >
           {experiences.map((exp) => (
             <option key={exp.id} value={exp.id}>
-              {exp.company} {/* Ou exp.title selon ton modèle */}
+              {exp.company}
             </option>
           ))}
         </select>

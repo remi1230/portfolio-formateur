@@ -1,4 +1,4 @@
-// components/Footer.jsx
+// components/footer/Footer.jsx
 import SocialIcon from '../menu/SocialIcon';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import ThemeSelector from '../ui-kit/ThemeSwitch';

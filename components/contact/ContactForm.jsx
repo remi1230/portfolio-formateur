@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import 'react-quill/dist/quill.snow.css';
 import clsx from 'clsx';
+import validateContactForm from '@/utils/validateContactForm';
 
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
@@ -34,30 +35,11 @@ export default function ContactForm() {
     }
   };
 
-  const validateForm = () => {
-    const newErrors = {};
-    if (!form.name.trim()) {
-      newErrors.name = 'Veuillez renseigner ce champ.';
-    }
-    if (!form.email.trim()) {
-      newErrors.email = 'Veuillez renseigner ce champ.';
-    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-      newErrors.email = 'L\'adresse email n\'est pas valide.';
-    }
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = form.message;
-    const plainText = tempDiv.textContent || tempDiv.innerText || '';
-    if (!plainText.trim()) {
-      newErrors.message = 'Veuillez renseigner ce champ.';
-    }
-    return newErrors;
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitted(true);
 
-    const formErrors = validateForm();
+    const formErrors = validateContactForm(form);
     setErrors(formErrors);
 
     if (Object.keys(formErrors).length > 0) {
@@ -105,10 +87,8 @@ export default function ContactForm() {
     'list', 'bullet', 'indent', 'link'
   ];
 
-  const focusQuillClasses = 'focus-within:border-red-500 focus-within:ring-red-500 focus-within:ring-1';
-
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4"> {/* gap-4 s'applique ici */}
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="relative">
           <input
@@ -181,9 +161,6 @@ export default function ContactForm() {
           </div>
         )}
       </div>
-
-      {/* !!! MODIFICATION ICI !!! */}
-      {/* Supprimez les classes mt-16 et md:mt-12. Le gap-4 du formulaire gérera l'espacement. */}
       <div className="flex justify-end">
         <button
           type="submit"

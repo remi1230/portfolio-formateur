@@ -1,5 +1,5 @@
 // src/components/Company/CompanyListItem.jsx
-import Image from 'next/image'; // 1. Importer le composant Image
+import Image from 'next/image';
 
 function CompanyListItem({ experience, isSelected, onSelect }) {
   const itemClassName = `
@@ -14,7 +14,7 @@ function CompanyListItem({ experience, isSelected, onSelect }) {
 
   return (
     <div className={itemClassName} onClick={onSelect}>
-      {/* 2. Remplacer la structure de l'image */}
+      {/* L'image */}
       <div className="">
         <Image
           src={experience.logo}

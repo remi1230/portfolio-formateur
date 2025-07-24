@@ -24,7 +24,7 @@ export async function POST(request) {
       from: `"${name}" <${email}>`,
       to: process.env.SMTP_USER,
       subject: `my1prod.com - Nouveau message de ${name}`,
-      // UTILISEZ 'html' AU LIEU DE 'text' POUR INCLURE LE FORMATAGE DU WYSIWYG
+      // UTILISER 'html' AU LIEU DE 'text' POUR INCLURE LE FORMATAGE DU WYSIWYG
       html: message,
     });
 

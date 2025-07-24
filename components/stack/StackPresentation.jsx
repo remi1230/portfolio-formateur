@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
-// --- Importez vos icônes ---
+// --- Importation des icônes ---
 import {
   FaReact,
   FaNodeJs,

@@ -1,7 +1,7 @@
 // src/components/Company/CompanyDetails.jsx
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
-import { motion } from 'framer-motion'; // <<< ADDED THIS LINE
+import { motion } from 'framer-motion';
 
 function CompanyDetails({ experience }) {
   if (!experience) {

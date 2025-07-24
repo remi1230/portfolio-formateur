@@ -5,7 +5,7 @@ function StackTitle() {
         Voici mes stacks de 
         <span className="text-brand-important"> prédilection</span>
       </h2>
-      <p className="mt-6 prose">
+      <p className="hidden md:block md:mt-6 mt-0 prose">
         Ma méthode : livrer rapidement une première version (ship first), puis itérer en continu.
         Grâce à une stack moderne et complète, je prends en charge toutes les dimensions d’un projet,
         pour qu’une simple idée prenne forme en un produit fiable et sécurisé.

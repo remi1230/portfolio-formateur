@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Pagination from './Pagination';
 import { articlesData } from './data'; // Assurez-vous que articlesData est bien un tableau d'articles
-import clsx from 'clsx'; // Pour fusionner les classes Tailwind si nécessaire
 import { motion, AnimatePresence } from 'framer-motion'; // Importez motion et AnimatePresence
 
 export default function ArticleListPage() {
@@ -36,7 +35,7 @@ const zoomVariants = {
   initial: { opacity: 0, scale: 0.8 }, // Commence plus petit et invisible
   animate: { opacity: 1, scale: 1 },   // Se met à l'échelle normale
   exit: { opacity: 0, scale: 0.8 },    // Disparaît en dézoomant
-}; //GOOD ++
+};
 
 const defaultTransition = { duration: 0.5, ease: "easeInOut" };
 
@@ -57,10 +56,10 @@ const defaultTransition = { duration: 0.5, ease: "easeInOut" };
       {/* AnimatePresence permet d'animer les composants qui sont retirés de l'arbre DOM */}
       <AnimatePresence mode="wait"> {/* 'wait' attend que l'animation de sortie soit terminée avant d'animer l'entrée */}
         <motion.div
-          key={currentPage} // C'est crucial : changer la clé force Framer Motion à considérer que c'est un "nouveau" composant et à déclencher l'animation
+          key={currentPage} // Changer la clé force Framer Motion à considérer que c'est un "nouveau" composant et à déclencher l'animation
           className="grid grid-cols-1 p-4 md:grid-cols-2 lg:grid-cols-3 gap-6 relative
           overflow-x-hidden max-h-[64vh] xl:max-h-none"
-          variants={zoomVariants} // Utilisez les variantes définies
+          variants={zoomVariants}
           initial="initial"
           animate="animate"
           exit="exit"

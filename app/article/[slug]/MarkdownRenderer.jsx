@@ -1,4 +1,4 @@
-// app/components/MarkdownRenderer.jsx
+// app/article/[slug]/MarkdownRenderer.jsx
 'use client'; // Indique que c'est un composant client
 
 import React, { useEffect } from 'react';
@@ -19,7 +19,6 @@ import 'prismjs/plugins/toolbar/prism-toolbar.css'; // Le CSS pour la barre d'ou
 import 'prismjs/plugins/toolbar/prism-toolbar.js'; // Le JS du plugin barre d'outils
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.js'; // Le JS du plugin copier-coller
 // ========================================================================================
-
 
 import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-json';
@@ -58,11 +57,6 @@ export default function MarkdownRenderer({ content }) {
     // Utiliser un setTimeout pour donner le temps au CSS d'être appliqué par le navigateur
     setTimeout(() => {
       if (typeof window !== 'undefined' && window.Prism && window.Prism.highlightAll) {
-        // Optionnel: Re-configurer le chemin de l'autoloader si nécessaire (si non géré globalement)
-        // if (window.Prism.autoloader && !window.Prism.autoloader.path) {
-        //   window.Prism.autoloader.path = '/prism-components/'; 
-        //   window.Prism.autoloader.use_minified = true;
-        // }
         window.Prism.highlightAll();
       }
     }, 50); // Un petit délai pour s'assurer que le CSS est appliqué
@@ -77,7 +71,6 @@ export default function MarkdownRenderer({ content }) {
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
-          //console.log('data-theme a changé. Mise à jour du thème Prism.js.');
           applyPrismThemeAndHighlight(); // Réappliquer le thème et la coloration
         }
       });
@@ -95,19 +88,17 @@ export default function MarkdownRenderer({ content }) {
   }, [content]); // Dépendance sur 'content' pour re-exécuter si le contenu Markdown change
 
 
-  // Vos classes personnalisées pour les blocs de code
+  // Classes personnalisées pour les blocs de code
   const customClasses = ['border-1', 'border-brand-bordcode-fg', 'line-numbers'];
 
   // Personnalisation du rendu des balises HTML par ReactMarkdown
   const customComponents = {
     // Intercepte la balise <pre> générée par ReactMarkdown pour les blocs de code.
-    // C'est ici que nous allons gérer le rendu complet du bloc de code avec Prism.js.
     pre: ({ node, children, ...props }) => {
-      // Destructurez la classe et le tabindex de ReactMarkdown pour <pre>
+      // Destructuration de la classe et du tabindex de ReactMarkdown pour <pre>
       const { className: preOriginalClassName, tabIndex: preTabIndex, ...restPreProps } = props;
 
       // IMPORTANT : Utiliser React.Children.toArray pour s'assurer que children est un tableau
-      // et trouver l'élément <code> de manière fiable.
       const childrenArray = React.Children.toArray(children);
       const codeChild = childrenArray.find(
         child => React.isValidElement(child) && child.type === 'code'
@@ -127,19 +118,15 @@ export default function MarkdownRenderer({ content }) {
         // `rehypeRaw` ou `remarkGfm` peuvent l'ajouter, causant une mismatch d'hydratation.
         const { tabIndex: codeChildTabIndex, ...restCodeChildProps } = codeChild.props;
 
-
         return (
           <pre
-            // Utilise clsx pour fusionner les classes:
-            // 1. Les classes originales passées par ReactMarkdown pour <pre> (preOriginalClassName)
-            // 2. La classe de langage (`language-${language}`)
-            // 3. Vos classes personnalisées (customClasses)
+            // Utilise clsx pour fusionner les classes
             className={clsx(
               preOriginalClassName, // Classes originales de ReactMarkdown pour <pre>
               language && `language-${language}`, // Ajoute la classe de langage si elle n'est pas déjà présente
-              ...customClasses // <-- Utilise vos classes personnalisées ici
+              ...customClasses // <-- Utilise les classes personnalisées ici
             )}
-            data-toolbar // <-- AJOUTEZ CET ATTRIBUT POUR ACTIVER LA TOOLBAR
+            data-toolbar // <-- ATTRIBUT POUR ACTIVER LA TOOLBAR
             {...restPreProps} // Passe les props restantes de <pre> (sans className et tabIndex)
           >
             {/* Rendre la balise <code> avec ses props et son contenu */}
@@ -159,15 +146,13 @@ export default function MarkdownRenderer({ content }) {
 
       // Si le contenu de <pre> n'est pas un <code> valide (cas rare ou Markdown mal formé),
       // nous rendons le <pre> par défaut pour éviter de casser l'affichage.
-      // Assurez-vous que className et tabIndex sont gérés même dans ce cas.
-      //console.warn("Composant PRE - Pas de <code> enfant valide trouvé. Rendu fallback.");
       return (
         <pre
           className={clsx(
             preOriginalClassName, // Utilise clsx pour gérer la className originale
-            ...customClasses // <-- Utilise vos classes personnalisées ici
+            ...customClasses // <-- Utilise les classes personnalisées ici
           )}
-          data-toolbar // <-- AJOUTEZ CET ATTRIBUT POUR ACTIVER LA TOOLBAR SUR LE FALLBACK
+          data-toolbar // <-- ATTRIBUT POUR ACTIVER LA TOOLBAR SUR LE FALLBACK
           {...restPreProps} // Passe les props restantes (sans className et tabIndex)
         >
           {children}
@@ -178,14 +163,12 @@ export default function MarkdownRenderer({ content }) {
     // La balise `code` sera interceptée ici pour le code inline ET pour les blocs de code.
     // ReactMarkdown passe la balise <code> comme enfant du <pre> pour les blocs de code.
     code: ({ node, inline, children, ...props }) => {
-      // Destructurez la classe et le tabindex de ReactMarkdown pour <code>
+      // Destructuration de la classe et du tabindex de ReactMarkdown pour <code>
       const { className: codeOriginalClassName, tabIndex: codeTabIndex, ...restCodeProps } = props;
-      //console.log(node);
       
       // Si ce n'est pas inline (c'est un <code> à l'intérieur d'un <pre>)
       // On s'assure que la classe de langage est présente pour Prism.js
-      if (node && node.properties && node.properties.className) {
-        return (
+      return (
           <code
             className={clsx(
               codeOriginalClassName, // Classes originales de ReactMarkdown (ex: "language-bash")
@@ -195,30 +178,26 @@ export default function MarkdownRenderer({ content }) {
             {children} {/* Rendre les children directement pour les blocs de code */}
           </code>
         );
-      } 
-      return (
-        <code
-          className={clsx(
-            codeOriginalClassName,
-          )}
-          {...restCodeProps} // Passe les props restantes (sans className et tabIndex)
-        >
-          {children} {/* Rendre les children directement pour le code inline */}
-        </code>
-      );
-      
     },
+
+    a: ({ node, href, children, ...props }) => (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...props}
+      >
+        {children}
+      </a>
+    ),
   };
 
   return (
     // Les classes Tailwind pour les blocs de code sont appliquées ici.
-    // Elles styliseront le conteneur <pre> que nous rendons.
     <div className="prose-pre:bg-brand-pre-bg prose-pre:text-brand-pre-fg">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
-        // RETIREZ OU COMMENTEZ LA LIGNE SUIVANTE SI VOUS L'AVEZ DANS VOTRE APPEL À <ReactMarkdown>
-        // rehypePlugins={[rehypeRaw]} 
-        components={customComponents} // Passez nos rendus personnalisés
+        components={customComponents} // Rendus personnalisés
       >
         {content}
       </ReactMarkdown>

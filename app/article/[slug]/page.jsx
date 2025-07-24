@@ -8,16 +8,12 @@ import Link from 'next/link';
 import { ArrowUpCircle } from 'lucide-react';
 import dynamic from 'next/dynamic'; // Importez dynamic de next/dynamic
 
-// Importez le composant MarkdownRenderer que nous avons créé.
-// Nous allons le charger dynamiquement.
-// import MarkdownRenderer from '../../components/MarkdownRenderer'; // Ne l'importez plus directement ici
 
-// Chargez dynamiquement le MarkdownRenderer avec SSR désactivé
+// Chargement dynamique de MarkdownRenderer avec SSR désactivé
 const DynamicMarkdownRenderer = dynamic(
-  () => import('../../../components/utils/MarkdownRenderer'),
+  () => import('./MarkdownRenderer'),
   { ssr: false } // Ceci est la clé : ne pas rendre ce composant côté serveur
 );
-
 
 export async function generateStaticParams() {
   return articlesData.map((article) => ({
@@ -58,14 +54,9 @@ export default async function ArticlePage({ params }) {
       <h1>{article.title}</h1>
       <p className="text-sm text-gray-500">{article.chapeau} • {article.dates}</p>
 
-      {/* Utilisez le composant chargé dynamiquement ici */}
+      {/* Composant chargé dynamiquement ici */}
       <DynamicMarkdownRenderer
         content={fileContent}
-        // RETIREZ LA PROP rehypePlugins ENTIÈREMENT SI VOUS NE L'AVEZ PAS BESOIN AILLEURS
-        // OU SI VOUS L'AVEZ DANS LE MARKDOWNRENDERER, ASSUREZ-VOUS QU'ELLE EST RETIRÉE LÀ-BAS.
-        // Dans votre cas, MarkdownRenderer ne prend pas de prop rehypePlugins,
-        // donc le problème est dans l'appel interne de ReactMarkdown dans MarkdownRenderer.
-        // Nous allons donc nous concentrer sur la modification de MarkdownRenderer.jsx
       />
       
       <div className="w-full flex justify-end gap-6">
