@@ -27,10 +27,10 @@ export default function Footer() {
                 <div>Ville de Bourges</div>
             </nav>
             <nav className="flex flex-row items-center gap-2">
-                    <SocialIcon href="https://github.com">
+                    <SocialIcon href="https://github.com/remi1230">
                         <FaGithub size={18} />
                     </SocialIcon>
-                    <SocialIcon href="https://linkedin.com">
+                    <SocialIcon href="https://www.linkedin.com/in/r%C3%A9mi-tafforeau/">
                         <FaLinkedin size={18} />
                     </SocialIcon>
                     <SocialIcon href="/assets/documents/CV.pdf" download>

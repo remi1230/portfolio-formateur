@@ -7,11 +7,13 @@
 @layer base {
   :root {
     --brand-bg: oklch(0.2034 0.04 265.69);
-    --brand-bg-card: oklch(0.2034 0.04 265.69);
+    --brand-bg-card: oklch(0.1834 0.04 265.69);
     --brand-navbar-bg: oklch(0.18 0.04 265.69 / 0.7);
     --brand-pre-bg: var(--color-slate-700);
     --brand-prose-fg: oklch(97.807% 0.029 256.847 / 0.8);
     --brand-strong-fg: oklch(97.807% 0.029 256.847);
+    --brand-hr-fg: oklch(0.97807 -0.00659901 -0.0282392 / 0.2);
+    --brand-mrk-fg: oklch(97.807% .029 256.847 / 0.5);
     --brand-pre-fg: var(--color-slate-700);
     --brand-placeholder-fg: var(--color-zinc-400);
     --brand-bordcode-bg: var(--color-slate-300);
@@ -38,6 +40,8 @@
     --brand-pre-bg: var(--color-slate-700);
     --brand-prose-fg: oklch(21% 0.006 285.885 / 0.8);
     --brand-strong-fg: oklch(21% 0.006 285.885);
+    --brand-hr-fg: oklch(0.21 0.00164225 -0.00577088 / 0.2);
+    --brand-mrk-fg: oklch(21% .006 285.885 / 0.5);
     --brand-pre-fg: var(--color-slate-300);
     --brand-placeholder-fg: var(--color-slate-400);
     --brand-bordcode-bg: var(--color-base-200);
@@ -65,17 +69,25 @@
     font-weight: var(--brand-prose-weight) !important;
     color: var(--brand-prose-fg) !important;
   }
-
-  .prose strong, .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6, .prose blockquote, .prose hr{
+  .prose strong, .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6, .prose blockquote, .prose th{
     color: var(--brand-strong-fg, currentColor) !important;
   }
-
+  .prose hr, .prose tr{
+    border-color: var(--brand-hr-fg, currentColor) !important;
+  }
+  .prose li::marker{
+    color: var(--brand-mrk-fg, currentColor) !important;
+  }
+  .prose thead{
+    border-color: var(--brand-mrk-fg, currentColor) !important;
+  }
   :where(code):not(pre > code){
     color: var(--brand-bordcode-fg) !important;
     background-color: var(--brand-bordcode-bg) !important;
     padding-right: 0px !important;
     margin-right: 3px !important;
   }
+
   .ql-editor::before {
     color: var(--brand-placeholder-fg) !important; 
   }
@@ -86,7 +98,6 @@
     display: flex; /* Assurez-vous que le conteneur gère bien la hauteur interne */
     flex-direction: column; /* Aide à la disposition interne */
   }
-
   /* Le .ql-editor à l'intérieur doit prendre la hauteur disponible */
   .ql-editor {
     flex-grow: 1; /* Permet à l'éditeur de remplir l'espace disponible dans le conteneur flex */
@@ -139,6 +150,8 @@
   --color-brand-pre-fg: var(--brand-pre-fg);
   --color-brand-prose-fg: var(--brand-prose-fg);
   --color-brand-strong-fg: var(--brand-strong-fg);
+  --color-brand-hr-fg: var(--brand-hr-fg);
+  --color-brand-mrk-fg: var(--brand-mrk-fg);
   --color-brand-placeholder-fg: var(--brand-placeholder-fg);
   --color-brand-bordcode-fg: var(--brand-bordcode-fg);
   --color-brand-message-bdr: var(--brand-message-bdr);

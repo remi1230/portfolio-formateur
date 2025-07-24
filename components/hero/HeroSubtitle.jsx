@@ -5,7 +5,7 @@ export default function HeroSubtitle() {
             Développeur Full stack FREELANCE avec 7 années d'expériences,
         </p>
         <p>
-            <span className="text-brand-important underline">je suis disponible</span> pour réaliser des sites robustes et évolutifs.
+            <a href="#contact" className="text-brand-important underline">je suis disponible</a> pour réaliser des sites robustes et évolutifs.
         </p>
     </div>
   );

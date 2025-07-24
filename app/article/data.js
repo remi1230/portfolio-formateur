@@ -22,7 +22,7 @@ export const articlesData = [
   {
     slug: 'react',
     title: "L'interface avec React",
-    chapeau: "React est une bibliothèque JavaScript open-source orientée composants.",
+    chapeau: "React est une bibliothèque JavaScript orientée composants.",
     dates: "24 Juin 2025",
     illustration: animReact,
   },
@@ -78,14 +78,14 @@ export const articlesData = [
   {
     slug: 'api-rest',
     title: "Les APIs REST",
-    chapeau: "Simples et efficaces adoptées : un standard incontournable pour faire dialoguer les applications web",
+    chapeau: "Un standard incontournable pour faire dialoguer les applications web",
     dates: "22 Novembre 2024",
     illustration: animRest,
   },
   {
     slug: 'versionning',
     title: "Le Versionning avec Git",
-    chapeau: "Simples et efficaces adoptées : un standard incontournable pour faire dialoguer les applications web",
+    chapeau: "Travailler en équipe et suivre les modifications d'un projet",
     dates: "11 Juillet 2024",
     illustration: animVersion,
   },
