@@ -17,7 +17,7 @@ J'ai orchestré la **modernisation complète d'applications essentielles**, en l
 Mon rôle a couvert la **refonte et l'amélioration de systèmes clés**, la migration de bases de données volumineuses, et la mise en place de nouvelles fonctionnalités sur mesure.
 
 Cette approche innovante a permis d'**améliorer la performance et la stabilité des applications**.
-En collaborant avec les équipes, j’ai veillé à ce que les solutions apportées offrent optimisent les processus internes et la qualité de service rendue aux usagers.
+En collaborant avec les équipes, j’ai veillé à ce que les solutions apportées optimisent les processus internes et la qualité de service rendue aux usagers.
     `.trim()
   },
   {
@@ -41,11 +41,11 @@ J'ai également fiabilisé les flux d'importation de données entre différents 
     dates: "Sept. 2019 - Sept. 2020",
     logo: logoEnedis,
     description: `
-J'ai géré la **conception et le développement d'un portail web majeur** visant à centraliser et optimiser la gestion de leurs opérations.
+J'ai géré la **conception et le développement d'un portail web majeur** visant à centraliser et optimiser la gestion des opérations.
 
 J'ai pris en charge toutes les étapes, de la **compréhension des besoins utilisateurs à la sécurisation avancée des accès et la conformité RGPD**.
 
-J'ai mis en place des **architectures robustes Symfony**, conçu des bases de données efficaces et développé des sites en méthode Agile.J'ai également modernisé un site SharePoint pour renforcer la collaboration interne, assurant des outils performants et sécurisés.
+J'ai mis en place des **architectures robustes Symfony**, conçu des bases de données efficaces et développé des sites en méthode Agile. J'ai également modernisé un site SharePoint pour renforcer la collaboration interne, assurant des outils performants et sécurisés.
     `.trim()
   },
   {
