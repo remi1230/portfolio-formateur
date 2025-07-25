@@ -94,7 +94,7 @@ export default function Navbar() {
             <SocialIcon href="https://www.linkedin.com/in/r%C3%A9mi-tafforeau/">
               <FaLinkedin size={18} />
             </SocialIcon>
-            <SocialIcon href="/assets/documents/CV.pdf" download>
+            <SocialIcon href="/assets/documents/CV-Rémi-Tafforeau.pdf" download>
               <span className="font-semibold text-sm">CV</span>
             </SocialIcon>
           </div>

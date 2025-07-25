@@ -21,7 +21,7 @@ export default function BioText() {
       </div>
       <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-4">
         <a href="#contact" className="btn btn-primary">Me contacter</a>
-        <a href="/assets/documents/CV.pdf" download="download" className="btn btn-outline btn-secondary" target="_blank">
+        <a href="/assets/documents/CV-Rémi-Tafforeau.pdf" download="CV-Rémi-Tafforeau.pdf" className="btn btn-outline btn-secondary">
           Télécharger mon CV
         </a>
       </div>
