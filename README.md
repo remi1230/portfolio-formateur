@@ -1,8 +1,8 @@
-## 📄 Portfolio - README
+## 📄 Portfolio formateur - README
 
 ### ✨ Présentation
 
-Ce projet est un portfolio personnel développé avec **Next.js 14** et **React 18**, afin de présenter mes compétences de développeur full stack. Il intègre une interface moderne, des animations fluides, un formulaire de contact, un rendu Markdown dynamique, et une coloration syntaxique pour les articles techniques.
+Ce projet est un portfolio personnel développé avec **Next.js 14** et **React 18**, afin de présenter mes compétences de formateur web. Il intègre une interface moderne, des animations fluides, un formulaire de contact, un rendu Markdown dynamique, et une coloration syntaxique pour les articles techniques.
 
 ### 🔧 Stack technique utilisée
 
@@ -55,8 +55,8 @@ Le projet suit une architecture modulaire avec l'App Router de Next.js. Voici la
 ### 🚌 Démarrage local
 
 ```bash
-git clone https://gitlab.com/remitafforeau/portfolio.git
-cd portfolio
+git clone https://github.com/remi1230/portfolio-formateur.git
+cd portfolio-formateur
 npm install
 npm run dev
 ```
