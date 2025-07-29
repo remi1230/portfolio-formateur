@@ -5,11 +5,12 @@ function StackTitle() {
         Voici mes stacks de 
         <span className="text-brand-important"> prédilection</span>
       </h2>
-      <p className="hidden md:block md:mt-6 mt-0 prose">
-        Ma méthode : livrer rapidement une première version (ship first), puis itérer en continu.
-        Grâce à une stack moderne et complète, je prends en charge toutes les dimensions d’un projet,
-        pour qu’une simple idée prenne forme en un produit fiable et sécurisé.
-      </p>
+      <div className="hidden md:block md:mt-6 mt-0 prose">
+        <p>Robustesse, modernité et adaptabilité.</p> Ils couvrent les principaux besoins d’un projet web :
+        frontend, backend, base de données, déploiement et travail collaboratif.
+        <p>J’interviens en formation sur des stacks modernes et professionnalisantes.</p>
+        <p>Former, c'est aussi donner des clés pour comprendre l'écosystème, rester curieux, et faire des choix techniques durables.</p>
+      </div>
     </div>
   );
 }

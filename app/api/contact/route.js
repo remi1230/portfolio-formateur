@@ -23,7 +23,7 @@ export async function POST(request) {
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
       to: process.env.SMTP_USER,
-      subject: `my1prod.com - Nouveau message de ${name}`,
+      subject: `my1prod.com - Formateur - Nouveau message de ${name}`,
       // UTILISER 'html' AU LIEU DE 'text' POUR INCLURE LE FORMATAGE DU WYSIWYG
       html: message,
     });

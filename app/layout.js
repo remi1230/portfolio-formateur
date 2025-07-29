@@ -12,11 +12,11 @@ const inter = Inter({
 // ✅ Métadonnées SEO globales
 export const metadata = {
   title: {
-    default: "Rémi Tafforeau | Développeur Full Stack Freelance",
+    default: "Rémi Tafforeau | Formateur web Freelance",
     template: "%s | Rémi Tafforeau",
   },
   description:
-    "Développeur web freelance spécialisé en React, Next.js et Symfony. Je conçois des applications modernes, performantes et accessibles.",
+    "Formateur web freelance spécialisé en React, Next.js et Symfony. Je conçois des applications modernes, performantes et accessibles.",
   keywords: [
     "développeur freelance",
     "Next.js",

@@ -5,7 +5,7 @@ export default function HeroTitle() {
             Rémi Tafforeau
         </h1>
         <h1 className="text-brand-important">
-            Dev. Web Freelance
+            Form. Web Freelance
         </h1>
     </div>
   );
