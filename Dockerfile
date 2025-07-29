@@ -16,7 +16,7 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copier le serveur optimisé standalone
-COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/standalone .
 # Copier les fichiers statiques Next.js
 COPY --from=builder /app/.next/static .next/static
 # Copier les assets publics
