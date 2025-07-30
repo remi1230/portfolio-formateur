@@ -23,6 +23,7 @@ Thumbs.db
 .vscode/
 
 # Docker
+Dockerfile
 docker-compose.override.yml
 .env
 .env.local
