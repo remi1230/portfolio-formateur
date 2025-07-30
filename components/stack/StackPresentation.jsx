@@ -90,6 +90,7 @@ export default function StackPresentation() {
         const Icon = tech.icon;
 
         return (
+          <div key={tech.name} className="tooltip tooltip-secondary" data-tip={tech.name} tabIndex={0}>
             <motion.div
             key={tech.name}
             className="mask mask-squircle p-[12px] flex items-center justify-center"
@@ -97,9 +98,11 @@ export default function StackPresentation() {
             variants={itemVariants}
             custom={delayIndex}
             title={tech.name}
+            data-tip={tech.name}
             >
             <Icon className="w-[64px] h-[64px]" style={{ color: tech.iconColor }} />
             </motion.div>
+          </div>
         );
     })}
 
