@@ -3,6 +3,8 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
   reactStrictMode: true,
+  // Sans cette ligne, .next/standalone n'est pas généré
+  output: isProd ? 'standalone' : undefined,
   basePath: isProd ? '/formateur' : '',
   assetPrefix: isProd ? '/formateur/' : '',
   images: {
