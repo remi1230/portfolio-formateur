@@ -4,7 +4,8 @@ import { useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 export default function Logo() {
-  const router = useRouter();
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const router   = useRouter();
   const pathname = usePathname();
 
   const handleClick = (e) => {
@@ -26,7 +27,7 @@ export default function Logo() {
       border border-transparent hover:border-brand-hover-brd-menu transition-colors duration-300"
     >
       <Image
-        src="/assets/images/logoSite.png"
+        src={`${basePath}/assets/images/logoSite.png`}
         alt="Logo Rémi Tafforeau"
         width={32}
         height={32}

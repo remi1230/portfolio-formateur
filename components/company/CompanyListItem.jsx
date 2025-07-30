@@ -2,6 +2,7 @@
 import Image from 'next/image';
 
 function CompanyListItem({ experience, isSelected, onSelect }) {
+  const basePath      = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const itemClassName = `
     flex items-center  gap-4 p-2 md:p-4 cursor-pointer
     transition-all duration-300 ease-in-out
@@ -17,7 +18,7 @@ function CompanyListItem({ experience, isSelected, onSelect }) {
       {/* L'image */}
       <div className="">
         <Image
-          src={experience.logo}
+          src={`${basePath + experience.logo}`}
           alt={`${experience.company} logo`}
           width={40}
           height={40}
