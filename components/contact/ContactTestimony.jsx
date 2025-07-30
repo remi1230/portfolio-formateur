@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 export default function ContactTestimony() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ? (process.env.NEXT_PUBLIC_BASE_PATH + '/') : '';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ? (process.env.NEXT_PUBLIC_BASE_PATH + '/') : '/';
 
   return (
     <div className="space-y-4 prose">
@@ -15,7 +15,7 @@ export default function ContactTestimony() {
 
       <div className="flex items-center gap-4 mt-4">
         <Image
-          src={`/${basePath}assets/images/avatar-gilles-guenette.png`}
+          src={`${basePath}assets/images/avatar-gilles-guenette.png`}
           alt="Pierre S."
           width={40}
           height={40}

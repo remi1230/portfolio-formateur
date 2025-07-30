@@ -5,7 +5,7 @@ import ThemeSelector from '../ui-kit/ThemeSwitch';
 import Image from 'next/image';
 
 export default function Footer() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ? (process.env.NEXT_PUBLIC_BASE_PATH + '/') : '';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ? (process.env.NEXT_PUBLIC_BASE_PATH + '/') : '/';
 
   return (
     <div className="bg-brand-footer">
@@ -13,7 +13,7 @@ export default function Footer() {
             <nav className="flex flex-col items-start gap-5">
                 <div className="flex flex-row items-center gap-y-5 gap-x-2 text-lg">
                     <Image
-                        src={`/${basePath}assets/images/logoSite.png`}
+                        src={`${basePath}assets/images/logoSite.png`}
                         alt="Logo Rémi Tafforeau"
                         width={32}
                         height={32}
