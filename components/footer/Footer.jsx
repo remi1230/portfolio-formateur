@@ -5,7 +5,7 @@ import ThemeSelector from '../ui-kit/ThemeSwitch';
 import Image from 'next/image';
 
 export default function Footer() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ? (process.env.NEXT_PUBLIC_BASE_PATH + '/') : '';
 
   return (
     <div className="bg-brand-footer">

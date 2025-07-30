@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 function CompanyDetails({ experience }) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   if (!experience) {
     return (
       <div className="flex items-center justify-center h-full">
@@ -22,7 +24,7 @@ function CompanyDetails({ experience }) {
     >
       <div className="w-[64px] h-[64px] hidden md:block mb-0 mt-6 xl:mt-0 xl:mb-6">
         <Image
-          src={experience.logo}
+          src={basePath + experience.logo}
           alt={`${experience.company} logo`}
           width={64}
           height={64}

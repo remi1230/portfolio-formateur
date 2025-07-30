@@ -18,7 +18,7 @@ function CompanyListItem({ experience, isSelected, onSelect }) {
       {/* L'image */}
       <div className="">
         <Image
-          src={`${basePath + experience.logo}`}
+          src={basePath + experience.logo}
           alt={`${experience.company} logo`}
           width={40}
           height={40}

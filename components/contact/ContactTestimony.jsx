@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 export default function ContactTestimony() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ? (process.env.NEXT_PUBLIC_BASE_PATH + '/') : '';
 
   return (
     <div className="space-y-4 prose">
