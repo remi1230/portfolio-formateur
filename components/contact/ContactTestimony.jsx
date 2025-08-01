@@ -2,6 +2,8 @@ import Image from 'next/image';
 import QuotedBlock from '../ui-kit/QuotedBlock';
 
 export default function ContactTestimony() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
     <div className="space-y-4 prose">
       <h3 className="text-sm font-bold tracking-wide uppercase">ENEDIS</h3>
@@ -13,8 +15,8 @@ export default function ContactTestimony() {
 
       <div className="flex items-center gap-4 mt-4">
         <Image
-          src="/assets/images/avatar-gilles-guenette.png"
-          alt="Bruno G."
+          src={`${basePath}/assets/images/avatar-gilles-guenette.png`}
+          alt="GIlles G."
           width={40}
           height={40}
           className="rounded-full object-cover"
