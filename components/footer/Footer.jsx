@@ -19,7 +19,15 @@ export default function Footer() {
                         height={32}
                         className="object-contain"
                     />
-                    <div>Rémi Tafforeau - <span className="badge badge-xs badge-success">SIRET 81907422000024</span></div>
+                    <div className="flex flex-row">
+                        <div className="mr-2 mt-1">
+                            Rémi Tafforeau
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <div className="badge badge-xs badge-success w-full">NDA 24180143118</div>
+                            <div className="badge badge-xs badge-success w-full h-full">SIRET 81907422000024</div>
+                        </div>
+                    </div>
                 </div>
                 <div>&copy; {new Date().getFullYear()} Rémi Tafforeau. Tous droits réservés.</div>
             </nav>
